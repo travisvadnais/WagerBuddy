@@ -5,6 +5,7 @@ var exphbs = require("express-handlebars");
 var routes = require('./controllers/routes.js');
 var PORT = process.env.PORT || 3000;
 var app = express();
+var automation = require ("./controllers/automation.js")
 
 
 app.use(express.static('public'));
