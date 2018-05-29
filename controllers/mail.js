@@ -1,17 +1,17 @@
 const nodemailer = require('nodemailer');
 // create reusable transporter object 
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: process.env.EMAIL_SERVICE,
     auth: {
-        user: 'yourbarbet@gmail.com', // user
-        pass: 'not4drunks' // password
+        user: process.env.EMAIL_USER, // user
+        pass: process.env.EMAIL_PSWD // password
     }
 });
 
 function sendMail(to, subject, bodyText, htmlText) {
     // setup email data with unicode symbols
     let mailOptions = {
-        from: 'yourbarbet@gmail.com', // sender address
+        from: process.env.EMAIL_FROM, // sender address
         to: to, // list of receivers
         subject: '🍺 Your Bar Bet: ' + subject, // Subject line
         text: bodyText, // plain text body
@@ -28,4 +28,5 @@ function sendMail(to, subject, bodyText, htmlText) {
         console.log('Message sent: %s', info.messageId);
     });
 }
+
 module.exports = sendMail;

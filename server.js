@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
@@ -6,6 +7,7 @@ var routes = require('./controllers/routes.js');
 var PORT = process.env.PORT || 3000;
 var app = express();
 var automation = require ("./controllers/automation.js")
+
 
 
 app.use(express.static('public'));
