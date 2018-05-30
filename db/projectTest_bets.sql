@@ -24,9 +24,9 @@ DROP TABLE IF EXISTS `bets`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `bets` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(88) DEFAULT NULL,
-  `terms` varchar(88) DEFAULT NULL,
-  `stakes` varchar(88) DEFAULT NULL,
+  `title` varchar(500) DEFAULT NULL,
+  `terms` varchar(500) DEFAULT NULL,
+  `stakes` varchar(500) DEFAULT NULL,
   `datetodecide` date DEFAULT NULL,
   `player1` int(11) NOT NULL,
   `player2` int(11) DEFAULT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE `bets` (
   `player1weish` tinyint(1) DEFAULT '0',
   `player2weish` tinyint(1) DEFAULT '0',
   `dateofbet` date DEFAULT NULL,
-  `player2Name` varchar(88) DEFAULT NULL,
+  `player2Name` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-30 15:37:19
+-- Dump completed on 2018-05-30 18:39:28
