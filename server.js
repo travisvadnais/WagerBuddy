@@ -9,7 +9,6 @@ var app = express();
 var automation = require ("./controllers/automation.js")
 
 
-
 app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({
