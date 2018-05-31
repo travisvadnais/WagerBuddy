@@ -9,21 +9,18 @@
 |                  | isn't already used for initial   | user.nickname       |
 |                  | log in, and for populating       | in alphabetical     |
 |                  | opponent dropdown                | order               | 
-----------------------------------------------------------------------------
 |                  |                                  |                     |
 | /activebets/:id  | used to pull all active bets     | bets.id, bets.title,| 
 |                  | where no winner has been         | bets.player2name    |
 |                  | declared that                    |                     |
 |                  | the player id is involved in     |                     |
 |                  |                                  |                     |
-----------------------------------------------------------------------------
 |                  |                                  |                     |
 |/inactivebets/:id | used to pull all completed bets  | bets.id, bets.title,|
 |                  | where a winner has been declared | bets.player2name,   |
 |                  | that the player id is involved   |  bets.player1win    |
 |                  | in                               |                     |
 |                  |                                  |                     |
-----------------------------------------------------------------------------
 |                  |                                  |                     |
 | /bet/:betid      | used to pull a single bet's      | bets.id, bets.title |
 |                  |  details                         |bets.terms,          |
@@ -36,7 +33,6 @@
 |                  |                                  | bets.player2welch   |
 |                  |                                  | bets.betdate        |
 |                  |                                  |                     |
-----------------------------------------------------------------------------
 |                  |                                  |                     |
 | /record/:id      | used to pull overall totals      | player.wins         |
 |                  | for the player id                | player.losses       |
@@ -54,7 +50,6 @@
 |                  | from one-time only log-in screen,|  user.id            |
 | /newuser         | Passes user.nickname, user.email |  (newly created)    |
 |                  | to server                        |                     |           
-----------------------------------------------------------------------------
 |                  |                                  |                     |
 | /newbet          | Passes user.id, bet.title,       | bet.id              |
 |                  | bet.terms, bet.stakes,           | (newly created)     |
