@@ -37,8 +37,7 @@
 | /record/:id      | used to pull overall totals      | player.wins         |
 |                  | for the player id                | player.losses       |
 |                  |                                  | player.welches      |
-|                  |                                  | player.activebets   |                  
-|                  |                                  |                     |
+|                  |                                  | player.activebets   |    |                  |                                  |                     |
 ----------------------------------------------------------------------------
 
 
