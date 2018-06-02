@@ -31,6 +31,7 @@ app.set('view engine', 'handlebars');
 //Require Routes
 require("./routes/users-routes.js")(app);
 require("./routes/wagers-routes")(app);
+require("./routes/html-routes.js")(app);
 
 //Sync Sequelize models and start express
 db.sequelize.sync({ force: true }).then(function() {
