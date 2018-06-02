@@ -1,0 +1,45 @@
+<head>
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<style>
+    input, textarea {display: block; margin-top: 5px}
+    fieldset {display:inline-block}
+</style>
+
+<form id="login_form">
+    <fieldset>
+        <legend>One-time Login</legend>
+        Nickname:
+        <input type="text" name="nickname" id="user_nickname" value="" placeholder="Enter Your Name">
+        <br>
+        Email: 
+        <input type="email" name="email" id="user_email" value="" placeholder="Enter Your Email">
+        <br>
+        <button type="submit" id="login_button">Log In</button>
+    </fieldset>
+</form>
+
+<form action="/bets/insert" method="POST" id="new_bet">
+    <fieldset>
+        <legend>Enter Your Bet Details!</legend>
+        Title:
+        <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!">
+        <br>
+        Opponent Nickame:
+        <input type="text" name="opponent" id="opponent_name" value="" placeholder="Opponent Nickname">
+        <br>
+        Settle Date:
+        <input type="date" name="settle_date" id="settle_date" value="">
+        <br>
+        Terms of Bet:
+        <textarea name="bet_terms" id="bet_terms" rows="3" cols="30" placeholder="Describe the bet here"></textarea>
+        <br>
+        Stakes:
+        <textarea name="bet_stakes" id="bet_stakes" rows="2" cols="30" placeholder="What are the stakes?"></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary" id="enter_button">Add Bet!</button>
+    </fieldset>
+</form>
+
+<script src="../js/route-testing.js" type="text/javascript"></script>
