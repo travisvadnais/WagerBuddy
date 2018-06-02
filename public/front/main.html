@@ -8,6 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
     <style>
@@ -16,12 +18,42 @@
     left: 100px;
     top: 150px;
 }  
+body{
+  background: rgb(13, 142, 228);
+}
+#splashscreen{
+  background-image: url(./test.png);
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  background-size: 300px 400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: rgb(13, 142, 228);
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+p{
+  font-family: 'Shrikhand', cursive;
+ 
+  position: absolute;
+    top: 50%;
+    left: 50%;
+     
+}
         
     </style>
             
   </head>
-  <body>
-    <body>
+  <body onload="splash(3000)">
+    
+    <div id=splashscreen>
+    
+    </div>
+
         <div class="container">
                 <input type="button" value="Submit" style="background: url(./test2.svg) no-repeat; width:30px; height:30px;">
          <p>hello world</p>
@@ -34,17 +66,21 @@
         </div>
         
                    
-      </body>
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <!-- popper-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script type="text/javascript">
     
-   
+    <script type="text/javascript">
+      function splash(param) {
+        setTimeout(function () {
+          document.getElementById('splashscreen').style.display = 'none';
+        }, param);
+      }
     </script>
     
   </body>
