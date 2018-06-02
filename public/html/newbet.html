@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Bet!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+<body>
+<form action="/bets/insert" method="POST" id="new_bet">
+    <fieldset>
+        <legend>Enter Your Bet Details!</legend>
+        Title:
+        <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!">
+        <br>
+        Opponent Nickame:
+        <input type="text" name="opponent" id="opponent_name" value="" placeholder="Opponent Nickname">
+        <br>
+        Settle Date:
+        <input type="text" class="datepicker" name="settle_date" id="settle_date" value="">
+        <br>
+        Terms of Bet:
+        <textarea name="bet_terms" id="bet_terms" rows="3" cols="30" placeholder="Describe the bet here"></textarea>
+        <br>
+        Stakes:
+        <textarea name="bet_stakes" id="bet_stakes" rows="2" cols="30" placeholder="What are the stakes?"></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary" id="enter_button">Add Bet!</button>
+    </fieldset>
+</form>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<script type="text/javaScript">
+    $(function() {
+
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15, // Creates a dropdown of 15 years to control year,
+            today: 'Today',
+            clear: 'Clear',
+            close: 'Ok',
+            closeOnSelect: false, // Close upon selecting a date,
+            container: undefined, // ex. 'body' will append picker to body
+        });
+
+    });
+</script>
+
+</body>
+
+          
+</html>
