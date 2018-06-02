@@ -5,10 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>New Bet!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/Users/CA/Desktop/WagerBuddy/public/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 </head>
 <body>
+        <div id="startbtn">
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="modalbtn">Lets Bet!</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Welcome to Wagerbuddy</h4>
+                    <fieldset>
+                            <legend >Login and enjoy!!!</legend>
+                            <input type="text" name="nickname" id="user_nickname" value="" placeholder="Enter Your Name">
+                            <br>
+                            <input type="email" name="email" id="user_email" value="" placeholder="Enter Your Email">
+                            <br>
+                    </fieldset>
+                    
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+                </div>
+            </div>
+              
+        </div>
 <form action="/bets/insert" method="POST" id="new_bet">
     <fieldset>
         <legend>Enter Your Bet Details!</legend>
@@ -31,6 +54,7 @@
     </fieldset>
 </form>
 
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -39,7 +63,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 <script type="text/javaScript">
-    $(function() {
+$(function() {
+    $('.modal').modal();
 
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
