@@ -46,9 +46,9 @@ p{
     left: 50%;
      
 }
-#newuser ,#email{
+#newuser {
    background: linear-gradient( rgb(63, 62, 62),rgb(100, 99, 99),rgb(63, 62, 62));
-   border: 1px double white;
+   border: 1px double rgb(100, 99, 99);
    -webkit-transition-duration: 0.4s; 
    transition-duration: 0.4s;
    box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.534), 0 8px 35px 0 rgba(0, 0, 0, 0.486);
@@ -56,6 +56,8 @@ p{
    border-radius: 5px;
    text-align: center;
    color: aqua;
+   border-radius: 50%;
+
   
 }
 .material-icons{
@@ -63,14 +65,11 @@ p{
   margin-right: 4px;
   font-size: 10px;
 }
-#email {
-  
-  top: 70%;
-  left: 60%;
+
 }
 #newuser {
-  top: 70%;
-  left: 20%;
+  top: 80%;
+  left: 50%;
 
 }
 #title{
@@ -88,7 +87,7 @@ p{
   </head>
   <body onload="splash(3000)">
   <!-- splash start screen -->
-  <div id=splashscreen></div>
+  <!-- <div id=splashscreen></div> -->
  <!-- container for the buttons an text of principal page -->
         <div class="container">
           <div id="title">Lets Start Simple<br>The Best way to Bet</div>
@@ -101,35 +100,26 @@ p{
             <div class="modal-content">
               <div class="row">
                 <form class="col s10"> 
-                    <div class="input-field" id="user_nickname " >
+                    <div class="input-field"  >
                       <i class="material-icons prefix">account_box</i>
-                      <input id="icon_prefix" type="text" class="validate">
+                      <input id="user_nickname " id="icon_prefix" type="text" class="validate">
                       <label for="icon_prefix">Nickname</label>
-                      <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
                     </div> 
                 </form>
               </div>
+              <div class="row">
+                  <form class="col s10"> 
+                      <div class="input-field" >
+                        <i class="material-icons prefix">mail_outline</i>
+                        <input id="user_email" id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Email</label>
+                        <button id= "login_form"class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                      </div> 
+                  </form>
+                </div>
           </div>
         </div>
-<!-- button email -->
-        <a  id="email"href="#modal2" class="waves-effect waves-light btn modal-trigger"><i class=" material-icons" >mail_outline</i>Email</a>
-<!-- secund modal for email -->
-        <div id="modal2" class="modal">
-          <div class="modal-content">
-            <div class="row">
-              <form class="col s10"> 
-                  <div class="input-field" id="user_email">
-                    <i class="material-icons prefix">mail_outline</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Email</label>
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
-                  </div> 
-              </form>
-            </div>
-          </div>
-        </div>
-    </div>
-    
+
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -138,19 +128,7 @@ p{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- popper-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    
-    <!-- <script type="text/javascript">
-      function splash(param) {
-        setTimeout(function () {
-          document.getElementById('splashscreen').style.display = 'none';
-        }, param);
-      }
-
-    $(document).ready(function(){   
-      $('.modal').modal();
-    $('.modal-trigger').leadModal();
-  });
-    </script> -->
+  <!--script .js  -->
     <script type="text/javascript" src="../js/main.js"></script>
   </body>
 </html>

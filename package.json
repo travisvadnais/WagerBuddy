@@ -1,5 +1,5 @@
 {
-  "name": "WagerBuddy",
+  "name": "wagerbuddy",
   "version": "1.0.0",
   "description": "App to track all the friendly wagers you make with your friends",
   "main": "server.js",
