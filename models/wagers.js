@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Wager = sequelize.define("Wager", {
         title: {
             type: DataTypes.STRING,
@@ -53,16 +53,20 @@ module.exports = function(sequelize, DataTypes) {
         player2name: {
             type: DataTypes.STRING,
             defaultValue: null
+        },
+        UserId: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     });
 
     //This should tie a wager to a user
-    Wager.associate = function(models) {
+    Wager.associate = function (models) {
         Wager.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
+            // foreignKey: 'player1',
+            allowNull: false
         })
     }
-    return Wager;
+
+return Wager;
 };
