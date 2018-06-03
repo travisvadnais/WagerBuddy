@@ -5,15 +5,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+   
     <!-- Bootstrap CSS -->
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
     <style>
       #one{
     position: absolute;
@@ -87,52 +87,70 @@ p{
             
   </head>
   <body onload="splash(3000)">
-    
-    <!-- <div id=splashscreen>
-    
-    </div> -->
-
+  <!-- splash start screen -->
+  <div id=splashscreen></div>
+ <!-- container for the buttons an text of principal page -->
         <div class="container">
           <div id="title">Lets Start Simple<br>The Best way to Bet</div>
-        
-
-          <!-- <img src="./secondbeer.png"> -->
-       
-              <a id="newuser" href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class=" material-icons">child_care</i>Login</a>
-
-              <div id="modal1" class="modal">
-                  <div class="modal-content">
-                    <h4>test</h4>
-                    <p>A bunch of text</p>
-                </div>
-              
-              <a id="email" class="waves-effect waves-light btn"><i class=" material-icons" >mail_outline</i>Email</a>
+         <!-- <img src="./secondbeer.png"> -->
+    <div id="startbtn">
+<!-- button nickname -->
+        <a  id="newuser"href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class=" material-icons">child_care</i>Login</a>
+<!-- first modal for user nickname -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+              <div class="row">
+                <form class="col s10"> 
+                    <div class="input-field" id="user_nickname " >
+                      <i class="material-icons prefix">account_box</i>
+                      <input id="icon_prefix" type="text" class="validate">
+                      <label for="icon_prefix">Nickname</label>
+                      <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                    </div> 
+                </form>
+              </div>
+          </div>
         </div>
-        
-       
-                   
+<!-- button email -->
+        <a  id="email"href="#modal2" class="waves-effect waves-light btn modal-trigger"><i class=" material-icons" >mail_outline</i>Email</a>
+<!-- secund modal for email -->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <div class="row">
+              <form class="col s10"> 
+                  <div class="input-field" id="user_email">
+                    <i class="material-icons prefix">mail_outline</i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Email</label>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                  </div> 
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- popper-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       function splash(param) {
         setTimeout(function () {
           document.getElementById('splashscreen').style.display = 'none';
         }, param);
       }
 
-        $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
+    $(document).ready(function(){   
+      $('.modal').modal();
+    $('.modal-trigger').leadModal();
   });
-    </script>
-    
+    </script> -->
+    <script type="text/javascript" src="../js/main.js"></script>
   </body>
 </html>
