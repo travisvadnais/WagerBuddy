@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS wagerbuddy_DB;
 --Create the DB--
 CREATE DATABASE wagerbuddy_DB;
 
-
+--
 -- USE wagerbuddy_DB;
 
 -- CREATE TABLE users(
@@ -30,3 +30,4 @@ CREATE DATABASE wagerbuddy_DB;
 --   player2name varchar(500) DEFAULT NULL,
 --   PRIMARY KEY (id)
 -- );
+--
