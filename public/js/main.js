@@ -1,16 +1,5 @@
-
 $(document).ready(function(){
     
-    
-//splash screen
-function splash(param) {
-    setTimeout(function () {
-      document.getElementById('splashscreen').style.display = 'none';
-    }, param);
-  }
-//modal for buttons
-$('.modal').modal();
-$('.modal-trigger').leadModal();
     //=======================================================================//
     //Toggle comments on/off to clear localstorage on page load for testing//
     //localStorage.removeItem('userId');
@@ -24,11 +13,14 @@ $('.modal-trigger').leadModal();
         alert(`Welcome ${localStorage.getItem('userId')}`);
     }
     else {
+        alert("you suck");
+        $('.modal').modal();
+        $('.modal-trigger').modal();
     
 
     //***************LAUNCH MODAL ONCE WE KNOW WHAT IT IS**************//
 
-    //Make IDs easier to use
+        //Make IDs easier to use
         var name = $("#user_nickname");
         var userEm = $("#user_email");
 

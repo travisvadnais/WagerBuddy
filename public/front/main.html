@@ -6,129 +6,68 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
-    <!-- Bootstrap CSS -->
-    <!-- Compiled and minified CSS -->
-  
+    <!-- Reset CSS File -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- CSS File specifically for this page -->
+    <link rel="stylesheet" href="../css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    
-    <style>
-      #one{
-    position: absolute;
-    left: 100px;
-    top: 150px;
-}  
-body{
-  background: rgb(255, 238, 0);
-}
-#splashscreen{
-  background-image: url(./test.png);
-  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-  background-size: 300px 400px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: rgb(13, 142, 228);
-  min-width: 100vw;
-  min-height: 100vh;
-  z-index: 9999;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-p{
-  font-family: 'Shrikhand', cursive;
- 
-  position: absolute;
-    top: 50%;
-    left: 50%;
-     
-}
-#newuser {
-   background: linear-gradient( rgb(63, 62, 62),rgb(100, 99, 99),rgb(63, 62, 62));
-   border: 1px double rgb(100, 99, 99);
-   -webkit-transition-duration: 0.4s; 
-   transition-duration: 0.4s;
-   box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.534), 0 8px 35px 0 rgba(0, 0, 0, 0.486);
-   position: absolute;
-   border-radius: 5px;
-   text-align: center;
-   color: aqua;
-   border-radius: 50%;
 
-  
-}
-.material-icons{
-  margin-top: 0.5px;
-  margin-right: 4px;
-  font-size: 10px;
-}
-
-}
-#newuser {
-  top: 80%;
-  left: 50%;
-
-}
-#title{
-  margin-top: 10%;
-  text-align: center;
-  font-family: 'Shrikhand', cursive;
-  font-size: 30px;
-}
-
-
-
-        
-    </style>
-            
+    <!-- Script to load the splash page and start the timer -->
+    <script>
+      function splash(param) {
+        setTimeout(function () {
+            document.getElementById('splashscreen').style.display = 'none';
+        }, param);
+      }
+    </script>
   </head>
+
   <body onload="splash(3000)">
-  <!-- splash start screen -->
-  <!-- <div id=splashscreen></div> -->
+    <!-- splash start screen -->
+    <div id=splashscreen></div>
  <!-- container for the buttons an text of principal page -->
-        <div class="container">
-          <div id="title">Lets Start Simple<br>The Best way to Bet</div>
-         <!-- <img src="./secondbeer.png"> -->
-    <div id="startbtn">
+    <div class="container">
+      <div id="title">Lets Start Simple<br>The Best way to Bet</div>
+        <!-- <img src="./secondbeer.png"> -->
+      <div id="startbtn">
 <!-- button nickname -->
         <a  id="newuser"href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class=" material-icons">child_care</i>Login</a>
 <!-- first modal for user nickname -->
         <div id="modal1" class="modal">
-            <div class="modal-content">
-              <div class="row">
+          <div class="modal-content">
+            <div class="row">
+              <form class="col s10"> 
+                  <div class="input-field"  >
+                    <i class="material-icons prefix">account_box</i>
+                    <input id="user_nickname " id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Nickname</label>
+                  </div> 
+              </form>
+            </div>
+            <div class="row">
                 <form class="col s10"> 
-                    <div class="input-field"  >
-                      <i class="material-icons prefix">account_box</i>
-                      <input id="user_nickname " id="icon_prefix" type="text" class="validate">
-                      <label for="icon_prefix">Nickname</label>
+                    <div class="input-field" >
+                      <i class="material-icons prefix">mail_outline</i>
+                      <input id="user_email" id="icon_prefix" type="text" class="validate">
+                      <label for="icon_prefix">Email</label>
+                      <button id= "login_form"class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
                     </div> 
                 </form>
               </div>
-              <div class="row">
-                  <form class="col s10"> 
-                      <div class="input-field" >
-                        <i class="material-icons prefix">mail_outline</i>
-                        <input id="user_email" id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Email</label>
-                        <button id= "login_form"class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
-                      </div> 
-                  </form>
-                </div>
           </div>
         </div>
 
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Updated jQuery library.  Removed the 'min' version -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- popper-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <!--script .js  -->
-    <script type="text/javascript" src="../js/main.js"></script>
   </body>
 </html>
