@@ -5,15 +5,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+   
     <!-- Bootstrap CSS -->
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
     <style>
       #one{
     position: absolute;
@@ -46,9 +46,9 @@ p{
     left: 50%;
      
 }
-#newuser ,#email{
+#newuser {
    background: linear-gradient( rgb(63, 62, 62),rgb(100, 99, 99),rgb(63, 62, 62));
-   border: 1px double white;
+   border: 1px double rgb(100, 99, 99);
    -webkit-transition-duration: 0.4s; 
    transition-duration: 0.4s;
    box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.534), 0 8px 35px 0 rgba(0, 0, 0, 0.486);
@@ -56,6 +56,8 @@ p{
    border-radius: 5px;
    text-align: center;
    color: aqua;
+   border-radius: 50%;
+
   
 }
 .material-icons{
@@ -63,14 +65,11 @@ p{
   margin-right: 4px;
   font-size: 10px;
 }
-#email {
-  
-  top: 70%;
-  left: 60%;
+
 }
 #newuser {
-  top: 70%;
-  left: 20%;
+  top: 80%;
+  left: 50%;
 
 }
 #title{
@@ -87,52 +86,49 @@ p{
             
   </head>
   <body onload="splash(3000)">
-    
-    <!-- <div id=splashscreen>
-    
-    </div> -->
-
+  <!-- splash start screen -->
+  <!-- <div id=splashscreen></div> -->
+ <!-- container for the buttons an text of principal page -->
         <div class="container">
           <div id="title">Lets Start Simple<br>The Best way to Bet</div>
-        
-
-          <!-- <img src="./secondbeer.png"> -->
-       
-              <a id="newuser" href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class=" material-icons">child_care</i>Login</a>
-
-              <div id="modal1" class="modal">
-                  <div class="modal-content">
-                    <h4>test</h4>
-                    <p>A bunch of text</p>
+         <!-- <img src="./secondbeer.png"> -->
+    <div id="startbtn">
+<!-- button nickname -->
+        <a  id="newuser"href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class=" material-icons">child_care</i>Login</a>
+<!-- first modal for user nickname -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+              <div class="row">
+                <form class="col s10"> 
+                    <div class="input-field"  >
+                      <i class="material-icons prefix">account_box</i>
+                      <input id="user_nickname " id="icon_prefix" type="text" class="validate">
+                      <label for="icon_prefix">Nickname</label>
+                    </div> 
+                </form>
+              </div>
+              <div class="row">
+                  <form class="col s10"> 
+                      <div class="input-field" >
+                        <i class="material-icons prefix">mail_outline</i>
+                        <input id="user_email" id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Email</label>
+                        <button id= "login_form"class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                      </div> 
+                  </form>
                 </div>
-              
-              <a id="email" class="waves-effect waves-light btn"><i class=" material-icons" >mail_outline</i>Email</a>
+          </div>
         </div>
-        
-       
-                   
+
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- popper-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    
-    <script type="text/javascript">
-      function splash(param) {
-        setTimeout(function () {
-          document.getElementById('splashscreen').style.display = 'none';
-        }, param);
-      }
-
-        $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-  });
-    </script>
-    
+  <!--script .js  -->
+    <script type="text/javascript" src="../js/main.js"></script>
   </body>
 </html>
