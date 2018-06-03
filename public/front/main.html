@@ -20,6 +20,8 @@
       function splash(param) {
         setTimeout(function () {
             document.getElementById('splashscreen').style.display = 'none';
+            //Once the splash page is done, run the checkUser fx (on main.js)
+            checkUser();
         }, param);
       }
     </script>
@@ -42,7 +44,7 @@
               <form class="col s10"> 
                   <div class="input-field"  >
                     <i class="material-icons prefix">account_box</i>
-                    <input id="user_nickname " id="icon_prefix" type="text" class="validate">
+                    <input id="user_nickname" id="icon_prefix" type="text" class="validate">
                     <label for="icon_prefix">Nickname</label>
                   </div> 
               </form>
