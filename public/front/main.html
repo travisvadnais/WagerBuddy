@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <style>
+      #one{
+    position: absolute;
+    left: 100px;
+    top: 150px;
+}  
+body{
+  background: rgb(255, 238, 0);
+}
+#splashscreen{
+  background-image: url(./test.png);
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  background-size: 300px 400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: rgb(13, 142, 228);
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+p{
+  font-family: 'Shrikhand', cursive;
+ 
+  position: absolute;
+    top: 50%;
+    left: 50%;
+     
+}
+#newuser ,#email{
+   background: linear-gradient( rgb(63, 62, 62),rgb(100, 99, 99),rgb(63, 62, 62));
+   border: 1px double white;
+   -webkit-transition-duration: 0.4s; 
+   transition-duration: 0.4s;
+   box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.534), 0 8px 35px 0 rgba(0, 0, 0, 0.486);
+   position: absolute;
+   border-radius: 5px;
+   text-align: center;
+   color: aqua;
+  
+}
+.material-icons{
+  margin-top: 0.5px;
+  margin-right: 4px;
+  font-size: 10px;
+}
+#email {
+  
+  top: 70%;
+  left: 60%;
+}
+#newuser {
+  top: 70%;
+  left: 20%;
+
+}
+#title{
+  margin-top: 10%;
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+  font-size: 30px;
+}
+
+
+
+        
+    </style>
+            
+  </head>
+  <body onload="splash(3000)">
+    
+    <!-- <div id=splashscreen>
+    
+    </div> -->
+
+        <div class="container">
+          <div id="title">Lets Start Simple<br>The Best way to Bet</div>
+        
+
+          <!-- <img src="./secondbeer.png"> -->
+       
+              <a id="newuser" href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class=" material-icons">child_care</i>Login</a>
+
+              <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>test</h4>
+                    <p>A bunch of text</p>
+                </div>
+              
+              <a id="email" class="waves-effect waves-light btn"><i class=" material-icons" >mail_outline</i>Email</a>
+        </div>
+        
+       
+                   
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    
+    <!-- popper-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+      function splash(param) {
+        setTimeout(function () {
+          document.getElementById('splashscreen').style.display = 'none';
+        }, param);
+      }
+
+        $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+    </script>
+    
+  </body>
+</html>
