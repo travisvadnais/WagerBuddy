@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Bet!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/Users/CA/Desktop/WagerBuddy/public/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/bet.css">
+</head>
+<body>
+        <!-- <div id="startbtn"> -->
+            <!-- Modal Trigger -->
+            <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="modalbtn">Lets Bet!</a> -->
+
+            <!-- Modal Structure -->
+            <!-- <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Welcome to Wagerbuddy</h4>
+                    <fieldset>
+                            <legend >Login and enjoy!!!</legend>
+                            <input type="text" name="nickname" id="user_nickname" value="" placeholder="Enter Your Name">
+                            <br>
+                            <input type="email" name="email" id="user_email" value="" placeholder="Enter Your Email">
+                            <br>
+                    </fieldset>
+                    
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+                </div>
+            </div>
+              
+        </div> -->
+
+<div class="container">
+    <a type="btn-floating"class="btn-floating btn-large waves-effect waves-light gren modal-trigger" class="datepicker"></a>
+
+
+    <form action="/bets/insert" method="POST" id="new_bet">
+    <fieldset>
+        <legend>Enter Your Bet Details!</legend>
+        Title:
+        <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!">
+        <br>
+        Opponent Nickame:
+        <input type="text" name="opponent" id="opponent_name" value="" placeholder="Opponent Nickname">
+        <br>
+        <!-- Settle Date:
+        <input type="text" class="datepicker" name="settle_date" id="settle_date" value="">
+        <br> -->
+        Terms of Bet:
+        <textarea name="bet_terms" id="bet_terms" rows="3" cols="30" placeholder="Describe the bet here"></textarea>
+        <br>
+        Stakes:
+        <textarea name="bet_stakes" id="bet_stakes" rows="2" cols="30" placeholder="What are the stakes?"></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary" id="enter_button">Add Bet!</button>
+    </fieldset>
+    </form>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<script src="../js/newBet.js" type="text/javaScript"></script>
+
+<script type="text/javaScript">
+$(function() {
+    $('.modal').modal();
+
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15, // Creates a dropdown of 15 years to control year,
+            today: 'Today',
+            clear: 'Clear',
+            close: 'Ok',
+            closeOnSelect: false, // Close upon selecting a date,
+            container: undefined, // ex. 'body' will append picker to body
+        });
+
+    });
+</script>
+
+</body>
+
+          
+</html>
