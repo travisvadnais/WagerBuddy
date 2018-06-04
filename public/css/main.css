@@ -60,8 +60,19 @@
     font-family: 'Shrikhand', cursive;
     font-size: 30px;
   }
+
   .preloader-wrapper{
     margin-right:auto;
     margin-left:auto;
-    
+  }
+
+  h5.modal_header {
+    text-align: center;
+    color: #26a69a;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+  }
+
+  #login_form {
+    margin-top: 10px;
   }

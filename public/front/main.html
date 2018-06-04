@@ -9,12 +9,12 @@
     <!-- Reset CSS File -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- CSS File specifically for this page -->
-    <link rel="stylesheet" href="../css/main.css">
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+    <link rel="stylesheet" href="../css/main.css">
     <!-- Script to load the splash page and start the timer -->
     <script>
       function splash(param) {
@@ -61,16 +61,19 @@
           </div>
     </div>
  <!-- container for the buttons an text of principal page -->
-    <div class="container fullscreen">
+
+    <div id = "maincontent" class="container fullscreen" 
+
       <div id="title">Lets Start Simple<br>The Best way to Bet</div>
         <!-- <img src="./secondbeer.png"> -->
       <div id="startbtn">
 <!-- button nickname -->
-        <a  id="newuser"href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class=" material-icons">child_care</i>Login</a>
+        <a id="newuser"href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class=" material-icons">child_care</i>Login</a>
 <!-- first modal for user nickname -->
         <div id="modal1" class="modal">
           <div class="modal-content">
             <div class="row">
+              <h5 class=modal_header>New User Registration</h5>
               <form class="col s10"> 
                   <div class="input-field"  >
                     <i class="material-icons prefix">account_box</i>
@@ -94,12 +97,14 @@
 
     <!-- Updated jQuery library.  Removed the 'min' version -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- popper-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <!--script .js  -->
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/lists.js"></script>
+  
+    <!--script .js  -->
   </body>
 </html>
