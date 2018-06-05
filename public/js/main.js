@@ -2,14 +2,14 @@ function checkUser(){
     
     //=======================================================================//
     //Toggle next line on/off to clear localstorage on page load for testing//
-    //localStorage.removeItem('userId');
+    //localStorage.removeItem('wagerbuddy_userId');
     //=======================================================================//
  
 
     //Check to see if there is a nickname cookie.
-    if (localStorage.getItem('userId') !== null) {
+    if (localStorage.getItem('wagerbuddy_userId') !== null) {
         //If so, notify the user that big brother is watching and we know who they are
-        console.log(`Welcome ${localStorage.getItem('userId')}`);
+        console.log(`Welcome ${localStorage.getItem('wagerbuddy_userId')}`);
     }
     else {
         console.log("you're a new user");
@@ -44,15 +44,41 @@ function checkUser(){
 
         //This will actually add to to the DB
         function addUser(userData) {
-            //Send the user data via the api route
-            $.post("/newuser", userData)
-                //API will reply w/ the new user object
-                .then(function(dbUser) {
-                    //take the ID from that object and pin to local storage
-                    localStorage.setItem('userId', dbUser.id)
-                    //Close the modal
-                    $(".modal").modal('close');
-                })
-        }
+            //Check to make sure we have a valid email address
+            console.log(userData.email.indexOf("."));
+            if (userData.email.indexOf(".") === -1 || userData.email.indexOf("@") === -1) {
+                //Launch an alert if invalid
+                alert("Please enter a valid email address");
+            }
+            //If it's valid, proceed to the next check
+            else {
+            //Next, we're going to check the username against the database for uniqueness w/ a GET
+            $.get("/names", userData.nickname)
+                .then(function(userList) {
+                    //Set a toggle w/ a default of TRUE
+                    var uniqueName = true;
+                    //Loop through the database names
+                    for (var i = 0; i < userList.length; i++) {
+                        //If there's a match, trigger the validation error & exit the loop
+                        if (userData.nickname == userList[i].nickname) {
+                            alert("pick a new nickname");
+                            unique = false;
+                            break;
+                        }
+                    }
+                    //If it IS unique, post the username to the DB via POST route
+                    if (uniqueName === true) {
+                        $.post("/newuser", userData)
+                        //API will reply w/ the new user object
+                        .then(function(dbUser) {
+                            //take the ID from that object and pin to local storage
+                            localStorage.setItem('wagerbuddy_userId', dbUser.id)
+                            //Close the modal
+                            $(".modal").modal('close');
+                        })
+                    }  //End IF statement            
+                }) //End GET.then    
+            } //End ELSE statement 
+        } //End UserData fx
     }
 };
