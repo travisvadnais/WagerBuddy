@@ -2,9 +2,9 @@ function checkUser(){
     
     //=======================================================================//
     //Toggle next line on/off to clear localstorage on page load for testing//
-    //localStorage.removeItem('wagerbuddy_userId');
+    localStorage.removeItem('wagerbuddy_userId');
     //=======================================================================//
- 
+    console.log(localStorage.getItem('wagerbuddy_userId'));
 
     //Check to see if there is a nickname cookie.
     if (localStorage.getItem('wagerbuddy_userId') !== null) {
@@ -47,8 +47,8 @@ function checkUser(){
             //Check to make sure we have a valid email address
             console.log(userData.email.indexOf("."));
             if (userData.email.indexOf(".") === -1 || userData.email.indexOf("@") === -1) {
-                //Launch an alert if invalid
-                alert("Please enter a valid email address");
+                //Show validation <h6> if invalid
+                $(".email_validation").show();
             }
             //If it's valid, proceed to the next check
             else {
@@ -61,7 +61,9 @@ function checkUser(){
                     for (var i = 0; i < userList.length; i++) {
                         //If there's a match, trigger the validation error & exit the loop
                         if (userData.nickname == userList[i].nickname) {
-                            alert("pick a new nickname");
+                            //Show validation <h6> if not unique
+                            $(".nickname_validation").show();
+                            console.log("pick a new nickname");
                             unique = false;
                             break;
                         }
