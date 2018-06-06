@@ -70,13 +70,13 @@
 <div class="container">
  <div class="col">
   <div class="row"> 
-    <div class="col s6"><a id="date"href="#modal3" class="waves-effect waves-light btn modal-trigger">
-      <i class="large material-icons">home</i>date</a></div>
-    <div class="col s6"><a id="homebtn"href="#modal1" class="waves-effect waves-light btn modal-trigger " ><i class="large material-icons">home</i>Home</a></div>
+    <div class="col s6"><a id="date" href="#modal2" class="waves-effect waves-light btn modal-trigger">
+      <i class="large material-icons">person</i>User</a></div>
+    <div class="col s6"><a id="homebtn" href="#modal3" class="waves-effect waves-light btn modal-trigger " ><i class="large material-icons">home</i>Home</a></div>
   </div>
   <div class="row">
-    <div class="col s6"><a id="newbet"href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class="large material-icons">home</i>newbet</a></div>
-    <div class="col s6"><a id="history"href="#modal1" class="waves-effect waves-light btn modal-trigger" ><i class="large material-icons">home</i>history</a></div>
+    <div class="col s6"><a id="newbet"href="#modal4" class="waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i>Bet</a></div>
+    <div class="col s6"><a id="history"href="#modal5" class="waves-effect waves-light btn modal-trigger" ><i class="large material-icons">event_note</i>history   </a></div>
   </div>
  </div>
 </div>  
@@ -121,6 +121,63 @@
               </div>
           </div>
         </div>
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <div class="row">
+              <h5 class=modal_header>User</h5>
+              <form class="col s10"> 
+                  <div class="input-field"  >
+                    <i class="material-icons prefix">person</i>
+                    <input id="user_nickname" id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Nickname</label>
+                  </div> 
+              </form>
+            </div>
+        </div>
+      </div>
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <div class="row">
+              <h5 class=modal_header>home</h5>
+              <form class="col s10"> 
+                  <div class="input-field"  >
+                    <i class="material-icons prefix">home</i>
+                    <input id="user_nickname" id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Perfil</label>
+                  </div> 
+              </form>
+            </div>
+        </div>
+      </div>
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <div class="row">
+            <h5 class=modal_header>bet</h5>
+            <form class="col s10"> 
+                <div class="input-field"  >
+                  <i class="material-icons prefix">monetization_on</i>
+                  <input id="user_nickname" id="icon_prefix" type="text" class="validate">
+                  <label for="icon_prefix">Bet</label>
+                </div> 
+            </form>
+          </div>
+      </div>
+    </div>
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+          <div class="row">
+            <h5 class=modal_header>history</h5>
+            <form class="col s10"> 
+                <div class="input-field"  >
+                  <i class="material-icons prefix">event_note</i>
+                  <input id="user_nickname" id="icon_prefix" type="text" class="validate">
+                  <label for="icon_prefix">History</label>
+                </div> 
+            </form>
+          </div>
+      </div>
+    </div>
+
 
     <!-- Updated jQuery library.  Removed the 'min' version -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>

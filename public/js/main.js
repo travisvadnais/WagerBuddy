@@ -15,7 +15,7 @@ function checkUser(){
         console.log("you're a new user");
         //Launch the modal for new users ONLY
         $('.modal').modal();
-        $('.modal').modal('open');
+        $('#modal1').modal('open');
 
         //Set a listener for the form submit & call the handleNewUser fx
         $(".s10").submit(function(event) {
@@ -82,3 +82,4 @@ function checkUser(){
         } //End UserData fx
     }
 };
+$('.modal').modal();
