@@ -1,3 +1,6 @@
+
+createMenu("#maincontent");
+
 function checkUser(){
     
     //=======================================================================//
@@ -113,4 +116,78 @@ function checkUser(){
         return uniqueEmail;
     }
 };
+
+function createMenu(targetDiv){
+    var staticDiv = $(targetDiv);
+    var masterDiv = $("<div>")
+     //var column1 = $("<col>")
+     //column1.addClass("col")
+    var row1 = $("<row>")
+    row1.addClass("row")
+    var column1a = $("<col>")
+    column1a.addClass("col s6")
+    column1a.html('<a id="mnewbet"href="#modal4" class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i><br>New bet</a>')
+    row1.append(column1a)
+    
+
+    var column1b = $("<col>")
+    column1b.addClass("col s6")
+    column1b.html('<a id="mactivebets" class="navbutton waves-effect waves-light btn" ><i class="large material-icons">access_time</i><br>current</a>')
+    row1.append(column1b)
+
+    var row2 = $("<row>")
+    row2.addClass("row")
+
+    var column2a = $("<col>")
+    column2a.addClass("col s6")
+    column2a.html('<a id="minactivebets" class="navbutton waves-effect waves-light btn" ><i class="large material-icons">history</i><br>past</a>')
+    row2.append(column2a)
+
+    var column2b = $("<col>")
+    column2b.addClass("col s6")
+    column2b.html('<a id="muser" href="#modal4" class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">person</i><br>user</a>')
+    row2.append(column2b)
+
+    staticDiv.empty();
+   // masterDiv.append(column1)
+    masterDiv.append(row1)
+    masterDiv.append(row2);
+    staticDiv.append(masterDiv);
+    
+//     <div class="col">
+//     <div class="row"> 
+//       <div class="col s6"><a id="date" href="#modal2" class="waves-effect waves-light btn modal-trigger">
+//         <i class="large material-icons">person</i>User</a></div>
+//       <div class="col s6"><a id="homebtn" href="#modal3" class="waves-effect waves-light btn modal-trigger " ><i class="large material-icons">home</i>Home</a></div>
+//     </div>
+//     <div class="row">
+//       <div class="col s6"><a id="newbet"href="#modal4" class="waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i>Bet</a></div>
+//       <div class="col s6"><a id="history"href="#modal5" class="waves-effect waves-light btn modal-trigger" ><i class="large material-icons">event_note</i>history   </a></div>
+//     </div>
+//    </div>
+
+}
+
 $('.modal').modal();
+
+$("#inactivebets").on('click',function(){
+    createTable(localStorage.getItem('wagerbuddy_userId'), "inactivebets", "#maincontent")
+})
+
+$("#activebets").on('click',function(){
+    createTable(localStorage.getItem('wagerbuddy_userId'), "activebets", "#maincontent")
+})
+
+$("#home").on('click',function(){
+    createMenu("#maincontent")
+})
+
+$("#maincontent").on('click',"#minactivebets",function(){
+    createTable(localStorage.getItem('wagerbuddy_userId'), "inactivebets", "#maincontent")
+})
+
+$("#maincontent").on('click',"#mactivebets",function(){
+    createTable(localStorage.getItem('wagerbuddy_userId'), "inactivebets", "#maincontent")
+})
+
+

@@ -29,7 +29,8 @@
     top: 50%;
     left: 50%;   
   }
-  #homebtn, #date, #newbet, #history {
+  #homebtn, #date, #newbet, #history, .navbutton {
+    padding: 10px;
     background: linear-gradient( rgb(63, 62, 62),rgb(100, 99, 99),rgb(63, 62, 62));
     border: 1px double rgb(100, 99, 99);
     -webkit-transition-duration: 0.4s; 
@@ -38,24 +39,43 @@
     /* position: absolute; */
     border-radius: 5px;
     text-align: center;
+    align-content: center;
     color: aqua;
     width: 100px;
     height: 100px;
     vertical-align: bottom;
     /* top: 20%;
     left: 20%; */
-    font-size: 20px;
+    font-size: 14px;
     border-radius: 20%;
   }
   #newbet, #history{
     margin-top: 20px;
   }
+
+  #minactivebets, #muser{
+    margin-top: 20px;
+  }  
+
   #homebtn, #date{
     margin-top: 60%;
   }
+
+  #mnewbet, #mactivebets{
+    margin-top: 60%;
+  }
+
+
   #date, #newbet{
     float: right;
   }
+
+  #mnewbet, #minactivebets{
+    float: right;
+  }
+
+
+
   .btn i{
     padding-top: 10px;
     font-size: 3.0rem;
@@ -103,3 +123,19 @@
   ul:not(.browser-default) {
     padding-left: 41%;
   }
+
+  footer {
+    Position: fixed;
+    Bottom: 0;
+    Left: 0;
+    Right: 0;
+    z-index: 3;
+    text-align: center;
+    background-color: brown;
+ 
+  }
+  a {
+    text-align: center;
+    padding: 10px;
+  }
+
