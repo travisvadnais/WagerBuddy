@@ -2,7 +2,7 @@ function checkUser(){
     
     //=======================================================================//
     //Toggle next line on/off to clear localstorage on page load for testing//
-    localStorage.removeItem('wagerbuddy_userId');
+    //localStorage.removeItem('wagerbuddy_userId');
     //=======================================================================//
     console.log(localStorage.getItem('wagerbuddy_userId'));
 
@@ -13,8 +13,8 @@ function checkUser(){
     }
     else {
         console.log("you're a new user");
-        //Launch the modal for new users ONLY
-        $('.modal').modal();
+        //Launch the modal for new users ONLY.  The 'dismissible' property will prevent users from exiting modal by clicking outside of it
+        $('.modal').modal({dismissible: false});
         $('#modal1').modal('open');
 
         //Set a listener for the form submit & call the handleNewUser fx
