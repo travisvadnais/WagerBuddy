@@ -2,7 +2,7 @@ function checkUser(){
     
     //=======================================================================//
     //Toggle next line on/off to clear localstorage on page load for testing//
-    localStorage.removeItem('wagerbuddy_userId');
+    //localStorage.removeItem('wagerbuddy_userId');
     //=======================================================================//
     console.log(localStorage.getItem('wagerbuddy_userId'));
 
