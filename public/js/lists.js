@@ -1,7 +1,7 @@
 // Uncomment these one at a time to see what they do:
 //createTable("3", "activebets", "#maincontent")
 //createTable("3", "inactivebets", "#maincontent")
-
+//localStorage.setItem('wagerbuddy_userId', '3')
 // Takes the user id, the type of list (inactivebets or activebets, and the targetDiv from the DOM)
 function createTable(id, type, targetDiv) {
     var StaticDiv = $(targetDiv);
@@ -24,10 +24,10 @@ function createTable(id, type, targetDiv) {
     table.append(tableHeader)
   // calls the API based on type of list
     if (type == 'activebets') {
-        masterDiv.prepend("<h2>Active wagers</h2>")
+        masterDiv.prepend("<h2>current wagers</h2>")
         var queryString = "/activebets/" + id;
     } else {
-        masterDiv.prepend("<h2>Inactive wagers</h2>")
+        masterDiv.prepend("<h2>past wagers</h2>")
         var queryString = "/inactivebets/" + id;
     }
     $.ajax({
@@ -70,10 +70,11 @@ function createRow(data, id, type) {
     }
     // if the user is the owner, give them an update button - otherwise, give them a view button
     if (id == data.player1) {
-        td4.html('<a id=' + data.id + '" class="update waves-effect waves-light btn"><i class="material-icons left">update</i>Update</a>')
+        td4.html('<a id=' + data.id + '" class="update waves-effect waves-light btn"><i class="small material-icons left">update</i>Update</a>')
     } else {
-        td4.html('<a id=' + data.id + '" class="view waves-effect waves-light btn"><i class="material-icons left">search</i>View  </a>')
+        td4.html('<a id=' + data.id + '" class="view waves-effect waves-light btn"><i class="small material-icons left">visibility</i>View  </a>')
     }
     newRow.append(td1, td2, td3, td4);
     return newRow;
 }
+
