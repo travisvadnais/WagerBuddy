@@ -2,7 +2,7 @@ function checkUser(){
     
     //=======================================================================//
     //Toggle next line on/off to clear localstorage on page load for testing//
-    //localStorage.removeItem('wagerbuddy_userId');
+    localStorage.removeItem('wagerbuddy_userId');
     //=======================================================================//
     console.log(localStorage.getItem('wagerbuddy_userId'));
 
@@ -19,6 +19,10 @@ function checkUser(){
 
         //Set a listener for the form submit & call the handleNewUser fx
         $(".s10").submit(function(event) {
+            //Hide the validators that may have populated on a prior failed registration attempt
+            $(".nickname_validation").hide();
+            $(".email_validation").hide();
+            $(".unique_email").hide();
             //Make IDs easier to use
             var name = $("#user_nickname");
             var userEm = $("#user_email");
@@ -50,7 +54,10 @@ function checkUser(){
                 //Show validation <h6> if invalid
                 $(".email_validation").show();
             }
-            //If it's valid, proceed to the next check
+            //If it's valid, proceed to the next check, which will check the e/m uniqueness
+            else if (checkEmailUniqueness(userData) === false) {
+                $(".unique_email").show();
+            }
             else {
             //Next, we're going to check the username against the database for uniqueness w/ a GET
             $.get("/names", userData.nickname)
@@ -82,6 +89,28 @@ function checkUser(){
                 }) //End GET.then    
             } //End ELSE statement 
         } //End UserData fx
+    }
+
+    //This fx will check DB to make sure e/m isn't already taken.
+    function checkEmailUniqueness(userData) {
+        //Set a toggle w/ a default of TRUE
+        var uniqueEmail = true;
+        $.get("/email", userData.email)
+            .then(function(userList) {
+                //Loop through the database emails
+                for (var i = 0; i < userList.length; i++) {
+                    //If there's a match, trigger the validation error & exit the loop
+                    if (userData.email == userList[i].email) {
+                        //Show validation <h6> if not unique
+                        $(".unique_email").show();
+                        console.log("This email is already taken");
+                        uniqueEmail = false;
+                        return uniqueEmail;
+                        break;
+                    }
+                }
+            })
+        return uniqueEmail;
     }
 };
 $('.modal').modal();

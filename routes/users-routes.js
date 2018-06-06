@@ -12,6 +12,15 @@ module.exports = function(app){
         });
     });
 
+    //Same route as above, except for emails.
+    //Will be used for email verification
+    app.get("/email", function(req, res) {
+        db.User.findAll({}).then(function(dbUser){
+            console.log(dbUser);
+            res.json(dbUser);
+        })
+    })
+
     //This route will post a new user to the DB
     app.post("/newuser", function(req, res) {
         console.log(req.body);

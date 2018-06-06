@@ -93,7 +93,7 @@
   }
 
   /* Styling for the user-registration validation fields */
-  h6.nickname_validation, h6.email_validation {
+  h6.nickname_validation, h6.email_validation, h6.unique_email {
     color: red;
     font-size: 10px;
     margin-left: 9%;
