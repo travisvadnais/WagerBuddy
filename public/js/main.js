@@ -14,7 +14,7 @@ function checkUser(){
     else {
         console.log("you're a new user");
         //Launch the modal for new users ONLY
-        $('.modal').modal();
+        $('.modal').modal({dismissible: false});
         $('#modal1').modal('open');
 
         //Set a listener for the form submit & call the handleNewUser fx
