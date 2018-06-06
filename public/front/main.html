@@ -24,6 +24,7 @@
             //Hide the validation <h6>s on pageload
             $(".nickname_validation").hide();
             $(".email_validation").hide();
+            $(".unique_email").hide();
             document.getElementById('splashscreen').style.display = 'none';
             //Once the splash page is done, run the checkUser fx (on main.js)
             checkUser();
@@ -136,6 +137,7 @@
                       <label for="icon_prefix">Email</label>
                       <!-- This <h6> will only appear if there's an email error -->
                       <h6 class="email_validation">Please select a valid email address.</h6>
+                      <h6 class="unique_email">This email is already taken.  Try again.</h6>
                       <button id= "login_form"class="btn waves-effect waves-light center" type="submit" name="action">Submit</button>
                     </div> 
                 </form>
