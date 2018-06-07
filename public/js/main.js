@@ -125,8 +125,8 @@ function createMenu(targetDiv){
     var row1 = $("<row>")
     row1.addClass("row")
     var column1a = $("<col>")
-    column1a.addClass("col s6")
-    column1a.html('<a id="mnewbet"href="#modal4" class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i><br>New bet</a>')
+    column1a.addClass("col s6") 
+    column1a.html('<a id="mnewbet" href="#modalbet"class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i><br>New bet</a>')
     row1.append(column1a)
     
 
@@ -145,7 +145,7 @@ function createMenu(targetDiv){
 
     var column2b = $("<col>")
     column2b.addClass("col s6")
-    column2b.html('<a id="muser" href="#modal4" class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">person</i><br>user</a>')
+    // column2b.html('<a id="muser" class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">person</i><br>user</a>')
     row2.append(column2b)
 
     staticDiv.empty();
@@ -153,30 +153,46 @@ function createMenu(targetDiv){
     masterDiv.append(row1)
     masterDiv.append(row2);
     staticDiv.append(masterDiv);
-    
-
 }
 
 $('.modal').modal();
-
-$("#inactivebets").on('click',function(){
-    createTable(localStorage.getItem('wagerbuddy_userId'), "inactivebets", "#maincontent")
+//click events for footer menu
+$("#home").on('click',function(){
+    createMenu("#maincontent")
 })
+
+// $("#newbet").on('click',function(){
+//     $('#modalbet').modal();
+//     $('#modalbet').modal('show');
+// })
 
 $("#activebets").on('click',function(){
     createTable(localStorage.getItem('wagerbuddy_userId'), "activebets", "#maincontent")
 })
 
-$("#home").on('click',function(){
-    createMenu("#maincontent")
+$("#inactivebets").on('click',function(){
+    createTable(localStorage.getItem('wagerbuddy_userId'), "inactivebets", "#maincontent")
+})
+
+//Click events for home screen navigation buttons
+
+$("#maincontent").on('click',"#mactivebets",function(){
+    createTable(localStorage.getItem('wagerbuddy_userId'), "activebets", "#maincontent")
 })
 
 $("#maincontent").on('click',"#minactivebets",function(){
     createTable(localStorage.getItem('wagerbuddy_userId'), "inactivebets", "#maincontent")
 })
 
-$("#maincontent").on('click',"#mactivebets",function(){
-    createTable(localStorage.getItem('wagerbuddy_userId'), "inactivebets", "#maincontent")
+$("#maincontent").on('click',"#newbet",function(){
+    $('#modalbet').modal();
+    $('#modalbet').modal('show');
 })
+
+// $("#nickname").on('click',function(){
+//     createbet()
+// })
+
+
 
 

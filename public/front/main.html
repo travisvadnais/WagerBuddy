@@ -74,60 +74,29 @@
       </div>
     </div>
   </div>
-  <!-- container for the buttons an text of principal page -->
 
-  <!-- <div id = "maincontent" class="container "  id="title"><p>Lets Start Simple<br>The Best way to Bet</p></h6> -->
-  <!-- <img src="./secondbeer.png"> -->
-
-  <!-- button nickname -->
 
   <div id="maincontent" class="container">
   </div>
-  <footer id="footer" class="page-footer">
-    <!-- <div id="footercontainer" class="container"> -->
-
-    <!-- <ul> -->
-
+  <footer id="footer">
+    <!--class="page-footer"-->
     <a id="home">
       <i class="medium material-icons">home</i>
     </a>
-    <a href="modalbet">
+    <a id="anewbet" class="modal-trigger" href="#modalbet">
       <i class="medium material-icons">monetization_on</i>
     </a>
     <!-- <a href="#modal5"><i class="medium material-icons">event_note</i></a> -->
     <a id="activebets">
       <i class="medium material-icons">access_time</i>
     </a>
+
     <a id="inactivebets">
       <i class="medium material-icons">history</i>
     </a>
-    
-    <!-- </ul> -->
-    <!-- </div> -->
-
   </footer>
-  <div id="modalbet" class="modal">
-    <div class="modal-content">
-      <div class="row">
-        <a class="btn-floating btn-small waves-effect waves-light red"><i>x</i></a>
-        <legend>Enter Your Bet Details!</legend>
-        Title:
-        <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!"></imput>
-        <br> Opponent Nickame:
-        <a id="nickname" class='dropdown-trigger btn' href='#' data-target='dropdown1'></a>
-          <br> Terms of Bet:
-          <input type="text" name="bet_terms" id="bet_terms" rows="3" cols="10">
-          </imput>
-          <br> Stakes:
-          <input type="text" name="bet_stakes" id="bet_stakes" rows="2" cols="10">
-          </imput>
-          <br>
-          <button type="submit" class="btn btn-primary center" id="enter_button">Add Bet!</button>
-      </div>
-    </div>
-  </div>
 
-  <!-- first modal for user nickname -->
+  <!-- Modals -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <div class="row">
@@ -157,92 +126,69 @@
         </div>
       </div>
     </div>
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        <div class="row">
-          <h5 class=modal_header>User</h5>
-          <form class="col s10">
-            <div class="input-field">
-              <i class="material-icons prefix">person</i>
-              <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">Nickname</label>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div id="modal3" class="modal">
-      <div class="modal-content">
-        <div class="row">
-          <h5 class=modal_header>home</h5>
-          <form class="col s10">
-            <div class="input-field">
-              <i class="material-icons prefix">home</i>
-              <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">Perfil</label>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div id="modal4" class="modal">
-      <div class="modal-content">
-        <div class="row">
-          <h5 class=modal_header>bet</h5>
-          <form class="col s10">
-            <div class="input-field">
-              <i class="material-icons prefix">monetization_on</i>
-              <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">Bet</label>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div id="modal5" class="modal">
-      <div class="modal-content">
-        <div class="row">
-          <h5 class=modal_header>history</h5>
-          <form class="col s10">
-            <div class="input-field">
-              <i class="material-icons prefix">event_note</i>
-              <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">History</label>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div id="modal6" class="modal">
-      <div class="modal-content">
-        <div class="row">
-          <h5 class=modal_header>New Bet</h5>
-          <form class="col s10">
-            <div class="input-field">
-              <i class="material-icons prefix">event_note</i>
-              <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">History</label>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- create modal that hold the new bet in a post form that send to the database and write javascript for the post -->
+  </div>
 
-    <!-- Updated jQuery library.  Removed the 'min' version -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <div id="modalbet" class="modal">
+    <div class="modal-content">
+      <div class="container">
+        <form action="/bets/insert" method="POST" id="new_bet">
+          <fieldset>
+            <legend>Enter Your Bet Details!</legend>
+            Title:
+            <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!">
+            <br> Opponent Nickame:
+            <input type="text" name="opponent" id="opponent_name" value="" placeholder="Opponent Nickname">
+            <br> Terms of Bet:
+            <input type="text" name="bet_terms" id="bet_terms" rows="3" cols="30">
+            </imput>
+            <br> Stakes:
+            <input type="text" name="bet_stakes" id="bet_stakes" rows="2" cols="30">
+            </imput>
+            <br> Date to settle:
+            <input type="text" class="datepicker" name="settle_date" id="settle_date" value="">
+            <br>
+            <button type="submit" class="btn btn-primary center" id="enter_button">Add Bet!</button>
+            <div class="dropdown">
+              <div id="myDropdown" class="dropdown-content">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <!-- popper-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/lists.js"></script>
 
-    <script type="text/javascript" src="../js/bet.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 
-    <!--script .js  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script src="../js/newBet.js" type="text/javaScript"></script>
+
+  <script type="text/javaScript">
+    $(function() { $('.modal').modal(); $('.datepicker').pickadate({ selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year, today: 'Today', clear: 'Clear', close: 'Ok', closeOnSelect:
+    false, // Close upon selecting a date, container: undefined, // ex. 'body' will append picker to body }); });
+  </script>
+  </div>
+  </div>
+  <!-- create modal that hold the new bet in a post form that send to the database and write javascript for the post -->
+
+  <!-- Updated jQuery library.  Removed the 'min' version -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- popper-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript" src="../js/lists.js"></script>
+
+  <script type="text/javascript" src="../js/bet.js"></script>
+
+  <!--script .js  -->
 </body>
 
 </html>
