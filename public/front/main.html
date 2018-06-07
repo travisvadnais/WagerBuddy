@@ -1,198 +1,233 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>WagerBuddy</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+<head>
+  <title>WagerBuddy</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
 
-    <!-- Reset CSS File -->
-    <link rel="stylesheet" href="../css/reset.css">
-    <!-- CSS File specifically for this page -->
-    
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <!-- Script to load the splash page and start the timer -->
-    <script>
-      function splash(param) {
-        setTimeout(function () {
-            //Hide the validation <h6>s on pageload
-            $(".nickname_validation").hide();
-            $(".email_validation").hide();
-            $(".unique_email").hide();
-            document.getElementById('splashscreen').style.display = 'none';
-            //Once the splash page is done, run the checkUser fx (on main.js)
-            checkUser();
-        }, param);
-      }
-    </script>
-  </head>
+  <!-- Reset CSS File -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <!-- CSS File specifically for this page -->
 
-  <body onload="splash(4000)">
-    <!-- splash start screen -->
-    <div id=splashscreen>
-        <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-blue">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div><div class="gap-patch">
-                <div class="circle"></div>
-              </div><div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-            <div class="spinner-layer spinner-red">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div><div class="gap-patch">
-                <div class="circle"></div>
-              </div><div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-            <div class="spinner-layer spinner-green">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div><div class="gap-patch">
-                <div class="circle"></div>
-              </div><div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-          </div>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- Script to load the splash page and start the timer -->
+  <script>
+    function splash(param) {
+      setTimeout(function () {
+        //Hide the validation <h6>s on pageload
+        $(".nickname_validation").hide();
+        $(".email_validation").hide();
+        $(".unique_email").hide();
+        document.getElementById('splashscreen').style.display = 'none';
+        //Once the splash page is done, run the checkUser fx (on main.js)
+        checkUser();
+      }, param);
+    }
+  </script>
+</head>
+
+<body onload="splash(4000)">
+  <!-- splash start screen -->
+  <div id=splashscreen>
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
     </div>
- <!-- container for the buttons an text of principal page -->
+  </div>
+  <!-- container for the buttons an text of principal page -->
 
-<!-- <div id = "maincontent" class="container "  id="title"><p>Lets Start Simple<br>The Best way to Bet</p></h6> -->
-        <!-- <img src="./secondbeer.png"> -->
-     
-<!-- button nickname -->
+  <!-- <div id = "maincontent" class="container "  id="title"><p>Lets Start Simple<br>The Best way to Bet</p></h6> -->
+  <!-- <img src="./secondbeer.png"> -->
 
-<div id = "maincontent" class="container">
-</div>  
-<footer id="footer" class="page-footer">
+  <!-- button nickname -->
+
+  <div id="maincontent" class="container">
+  </div>
+  <footer id="footer" class="page-footer">
     <!-- <div id="footercontainer" class="container"> -->
-      
-        <!-- <ul> -->
+
+    <!-- <ul> -->
+
+    <a id="home">
+      <i class="medium material-icons">home</i>
+    </a>
+    <a href="modalbet">
+      <i class="medium material-icons">monetization_on</i>
+    </a>
+    <!-- <a href="#modal5"><i class="medium material-icons">event_note</i></a> -->
+    <a id="activebets">
+      <i class="medium material-icons">access_time</i>
+    </a>
+    <a id="inactivebets">
+      <i class="medium material-icons">history</i>
+    </a>
     
-            <a id="home"><i class="medium material-icons">home</i></a>
-            <a href="#modal4"><i class="medium material-icons">monetization_on</i></a>
-            <!-- <a href="#modal5"><i class="medium material-icons">event_note</i></a> -->
-            <a id="activebets"><i class ="medium material-icons">access_time</i></a>
-            <a id="inactivebets"><i class ="medium material-icons">history</i></a>
-            <a href="#modal2"><i class="medium material-icons">person</i></a>
-            <!-- </ul> -->
+    <!-- </ul> -->
     <!-- </div> -->
-    
+
   </footer>
- 
-<!-- <div id="modal3" class="modal">
+  <div id="modalbet" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <a class="btn-floating btn-small waves-effect waves-light red"><i>x</i></a>
+        <legend>Enter Your Bet Details!</legend>
+        Title:
+        <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!"></imput>
+        <br> Opponent Nickame:
+        <a id="nickname" class='dropdown-trigger btn' href='#' data-target='dropdown1'></a>
+          <br> Terms of Bet:
+          <input type="text" name="bet_terms" id="bet_terms" rows="3" cols="10">
+          </imput>
+          <br> Stakes:
+          <input type="text" name="bet_stakes" id="bet_stakes" rows="2" cols="10">
+          </imput>
+          <br>
+          <button type="submit" class="btn btn-primary center" id="enter_button">Add Bet!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- first modal for user nickname -->
+  <div id="modal1" class="modal">
     <div class="modal-content">
       <div class="row">
         <h5 class=modal_header>New User Registration</h5>
-        <form class="col s10"> 
-            <div class="input-field"  >
-              <i class="material-icons prefix">account_box</i>
+        <form class="col s10">
+          <div class="input-field">
+            <i class="material-icons prefix">account_box</i>
+            <input id="user_nickname" id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Nickname</label>
+            <!-- This <h6> will only appear if there's a nickname error -->
+            <h6 class="nickname_validation">This nickname is already taken. Try again.</h6>
+            </h6>
+        </form>
+        </div>
+        <div class="row">
+          <form class="col s10">
+            <div class="input-field">
+              <i class="material-icons prefix">mail_outline</i>
+              <input id="user_email" id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Email</label>
+              <!-- This <h6> will only appear if there's an email error -->
+              <h6 class="email_validation">Please select a valid email address.</h6>
+              <h6 class="unique_email">This email is already taken. Try again.</h6>
+              <button id="login_form" class="btn waves-effect waves-light center" type="submit" name="action">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <h5 class=modal_header>User</h5>
+          <form class="col s10">
+            <div class="input-field">
+              <i class="material-icons prefix">person</i>
               <input id="user_nickname" id="icon_prefix" type="text" class="validate">
               <label for="icon_prefix">Nickname</label>
-            </div> 
-        </form>
-      </div>
-  </div>
- -->
-
-<!-- first modal for user nickname -->
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <div class="row">
-              <h5 class=modal_header>New User Registration</h5>
-              <form class="col s10"> 
-                  <div class="input-field"  >
-                    <i class="material-icons prefix">account_box</i>
-                    <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Nickname</label>
-                    <!-- This <h6> will only appear if there's a nickname error -->
-                    <h6 class="nickname_validation">This nickname is already taken.  Try again.</h6>
-                  </h6> 
-              </form>
             </div>
-            <div class="row">
-                <form class="col s10"> 
-                    <div class="input-field" >
-                      <i class="material-icons prefix">mail_outline</i>
-                      <input id="user_email" id="icon_prefix" type="text" class="validate">
-                      <label for="icon_prefix">Email</label>
-                      <!-- This <h6> will only appear if there's an email error -->
-                      <h6 class="email_validation">Please select a valid email address.</h6>
-                      <h6 class="unique_email">This email is already taken.  Try again.</h6>
-                      <button id= "login_form"class="btn waves-effect waves-light center" type="submit" name="action">Submit</button>
-                    </div> 
-                </form>
-              </div>
-          </div>
+          </form>
         </div>
-        <div id="modal2" class="modal">
-          <div class="modal-content">
-            <div class="row">
-              <h5 class=modal_header>User</h5>
-              <form class="col s10"> 
-                  <div class="input-field"  >
-                    <i class="material-icons prefix">person</i>
-                    <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Nickname</label>
-                  </div> 
-              </form>
-            </div>
-        </div>
-      </div>
-        <div id="modal3" class="modal">
-          <div class="modal-content">
-            <div class="row">
-              <h5 class=modal_header>home</h5>
-              <form class="col s10"> 
-                  <div class="input-field"  >
-                    <i class="material-icons prefix">home</i>
-                    <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Perfil</label>
-                  </div> 
-              </form>
-            </div>
-        </div>
-      </div>
-      <div id="modal4" class="modal">
-        <div class="modal-content">
-          <div class="row">
-            <h5 class=modal_header>bet</h5>
-            <form class="col s10"> 
-                <div class="input-field"  >
-                  <i class="material-icons prefix">monetization_on</i>
-                  <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-                  <label for="icon_prefix">Bet</label>
-                </div> 
-            </form>
-          </div>
       </div>
     </div>
-      <div id="modal5" class="modal">
-        <div class="modal-content">
-          <div class="row">
-            <h5 class=modal_header>history</h5>
-            <form class="col s10"> 
-                <div class="input-field"  >
-                  <i class="material-icons prefix">event_note</i>
-                  <input id="user_nickname" id="icon_prefix" type="text" class="validate">
-                  <label for="icon_prefix">History</label>
-                </div> 
-            </form>
-          </div>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <h5 class=modal_header>home</h5>
+          <form class="col s10">
+            <div class="input-field">
+              <i class="material-icons prefix">home</i>
+              <input id="user_nickname" id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Perfil</label>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <h5 class=modal_header>bet</h5>
+          <form class="col s10">
+            <div class="input-field">
+              <i class="material-icons prefix">monetization_on</i>
+              <input id="user_nickname" id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Bet</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <h5 class=modal_header>history</h5>
+          <form class="col s10">
+            <div class="input-field">
+              <i class="material-icons prefix">event_note</i>
+              <input id="user_nickname" id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">History</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <h5 class=modal_header>New Bet</h5>
+          <form class="col s10">
+            <div class="input-field">
+              <i class="material-icons prefix">event_note</i>
+              <input id="user_nickname" id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">History</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- create modal that hold the new bet in a post form that send to the database and write javascript for the post -->
 
     <!-- Updated jQuery library.  Removed the 'min' version -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
@@ -200,10 +235,14 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- popper-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/lists.js"></script>
-  
+
+    <script type="text/javascript" src="../js/bet.js"></script>
+
     <!--script .js  -->
-  </body>
+</body>
+
 </html>

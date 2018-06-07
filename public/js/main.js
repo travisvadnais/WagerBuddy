@@ -154,17 +154,6 @@ function createMenu(targetDiv){
     masterDiv.append(row2);
     staticDiv.append(masterDiv);
     
-//     <div class="col">
-//     <div class="row"> 
-//       <div class="col s6"><a id="date" href="#modal2" class="waves-effect waves-light btn modal-trigger">
-//         <i class="large material-icons">person</i>User</a></div>
-//       <div class="col s6"><a id="homebtn" href="#modal3" class="waves-effect waves-light btn modal-trigger " ><i class="large material-icons">home</i>Home</a></div>
-//     </div>
-//     <div class="row">
-//       <div class="col s6"><a id="newbet"href="#modal4" class="waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i>Bet</a></div>
-//       <div class="col s6"><a id="history"href="#modal5" class="waves-effect waves-light btn modal-trigger" ><i class="large material-icons">event_note</i>history   </a></div>
-//     </div>
-//    </div>
 
 }
 
