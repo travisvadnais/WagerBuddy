@@ -131,13 +131,14 @@
   <div id="modalbet" class="modal">
     <div class="modal-content">
       <div class="container">
-        <form action="/bets/insert" method="POST" id="new_bet">
+        <form id="new_bet">
           <fieldset>
             <legend>Enter Your Bet Details!</legend>
             Title:
             <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!">
             <br> Opponent Nickame:
             <input type="text" name="opponent" id="opponent_name" value="" placeholder="Opponent Nickname">
+            <hr>
             <br> Terms of Bet:
             <input type="text" name="bet_terms" id="bet_terms" rows="3" cols="30">
             </imput>
@@ -147,7 +148,7 @@
             <br> Date to settle:
             <input type="text" class="datepicker" name="settle_date" id="settle_date" value="">
             <br>
-            <button type="submit" class="btn btn-primary center" id="enter_button">Add Bet!</button>
+            <button type="submit" class="btn btn-primary center" id="newbetbutton">Add Bet!</button>
             <div class="dropdown">
               <div id="myDropdown" class="dropdown-content">
               </div>
@@ -168,8 +169,14 @@
 
   <script type="text/javaScript">
     $(function() { $('.modal').modal(); $('.datepicker').pickadate({ selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15, // Creates a dropdown of 15 years to control year, today: 'Today', clear: 'Clear', close: 'Ok', closeOnSelect:
-    false, // Close upon selecting a date, container: undefined, // ex. 'body' will append picker to body }); });
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today', 
+    clear: 'Clear', 
+    close: 'Ok', 
+    closeOnSelect: false, // Close upon selecting a date, container: undefined, 
+    // ex. 'body' will append picker to body 
+      }); 
+    });
   </script>
   </div>
   </div>

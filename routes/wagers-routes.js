@@ -65,7 +65,7 @@ module.exports = function (app) {
                 terms: req.body.terms,
                 stakes: req.body.stakes,
                 settledate: req.body.settledate,
-                player1: req.body.id,
+                player1: req.body.UserId,
                 player2: player2id,
                 player2name: player2name,
                 UserId: req.body.UserId
@@ -82,7 +82,7 @@ module.exports = function (app) {
                 terms: req.body.terms,
                 stakes: req.body.stakes,
                 settledate: req.body.settledate,
-                player1: req.body.id,
+                player1: req.body.UserId,
                 player2: player2id,
                 player2name: player2name,
                 UserId: req.body.UserId

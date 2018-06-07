@@ -185,6 +185,7 @@ $("#maincontent").on('click',"#minactivebets",function(){
 })
 
 $("#maincontent").on('click',"#newbet",function(){
+    createBet ("#opponent_name")
     $('#modalbet').modal();
     $('#modalbet').modal('show');
 })
