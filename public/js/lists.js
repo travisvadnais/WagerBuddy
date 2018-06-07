@@ -23,7 +23,7 @@ function createTable(id, type, targetDiv) {
     headerRow.append(tableHead1, tableHead2, tableHead3, tableHead4)
     tableHeader.append(headerRow)
     table.append(tableHeader)
-  // calls the API based on type of list
+    // calls the API based on type of list
     if (type == 'activebets') {
         masterDiv.prepend("<h2>current wagers</h2>")
         var queryString = "/activebets/" + id;
@@ -79,3 +79,74 @@ function createRow(data, id, type) {
     return newRow;
 }
 
+function createSummary(wagerID, userID, requestType, targetDiv) {
+    var staticDiv = $(targetDiv);
+    var MasterDiv = $("<div>")
+    MasterDiv.attr("id", wagerID)
+    MasterDiv.addClass("container betsummary")
+    var queryString = '/bet/' + wagerID;
+    $.ajax({
+        url: queryString,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response)
+        var htmlString = ""
+        htmlString += '<i class="medium material-icons">monetization_on</i>'
+        htmlString += "<h3>" + response[0].title + "</h3><br>"
+        MadeDate = response[0].createdAt.slice(0,10)
+        htmlString += '<b>made: </b>' + MadeDate + '<br>'
+        htmlString += "<b>with:</b> " + response[0].player2name + "<br>"
+        htmlString += "<b>Terms:</b> " + response[0].terms + "<br>"
+        htmlString += "<b>Stakes:</b> " + response[0].stakes + "<br>"
+        ResolutionDate = response[0].settledate.slice(0,10)
+        htmlString += '<b>Settle date: </b>' + ResolutionDate + '<br>'        
+        if (response[0].player1win == true) {
+            htmlString += '<i class="small material-icons">mood</i>win<br>'
+        } else if (response[0].player2win == true) {
+            htmlString += '<i class="small material-icons">mood_bad</i>loss<br>'
+        } else {
+            var betDate = new Date(response[0].settledate)
+            var nowDate = Date.now()
+            if (betDate < nowDate) {
+                htmlString +="<i class='small material-icons'>access_alarm</i> Overdue<br>"
+            } else {
+                htmlString +="<i class='small material-icons'>access_time</i> Open<br>"
+            }    
+
+        }
+
+        MasterDiv.html(htmlString);
+        
+    // <form action="#">
+    // <p>
+    //   <label>
+    //     <input name="group1" type="radio" checked />
+    //     <span>You won</span>
+    //   </label>
+    // </p>
+    // <p>
+    //   <label>
+    //     <input name="group1" type="radio" />
+    //     <span>They won</span>
+    //   </label>
+    // </p>
+
+        staticDiv.empty();
+        staticDiv.append(MasterDiv)
+    })
+
+
+}
+
+
+$("#maincontent").on('click', ".view", function () {
+    createSummary(this.id, localStorage.getItem('wagerbuddy_userId'), "view", "#maincontent")
+
+
+})
+
+$("#maincontent").on('click', ".update", function () {
+    createSummary(this.id, localStorage.getItem('wagerbuddy_userId'), "update", "#maincontent")
+
+
+})
