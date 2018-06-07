@@ -18,10 +18,4 @@ function createbet(){
 
 }
 
-$("#nickname").on('click',function(){
-    createbet()
-})
-// $("#newbet").on('click',function(){
-//     $('.modal').modal();
-//     $('#modalbet').modal();
-// })
+

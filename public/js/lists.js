@@ -1,7 +1,8 @@
 // Uncomment these one at a time to see what they do:
 //createTable("3", "activebets", "#maincontent")
 //createTable("3", "inactivebets", "#maincontent")
-//localStorage.setItem('wagerbuddy_userId', '3')
+//localStorage.setItem('wagerbuddy_userId', "3")
+//localStorage.clear('wagerbuddy_userId')
 // Takes the user id, the type of list (inactivebets or activebets, and the targetDiv from the DOM)
 function createTable(id, type, targetDiv) {
     var StaticDiv = $(targetDiv);
