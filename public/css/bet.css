@@ -3,4 +3,5 @@ textarea{
 }
 .btn-floating{
     background-color: green;
+    float: right;
 }

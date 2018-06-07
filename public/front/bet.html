@@ -40,6 +40,7 @@
 
     <form action="/bets/insert" method="POST" id="new_bet">
     <fieldset>
+        <a class="btn-floating btn-small waves-effect waves-light red"><i>x</i></a>
         <legend>Enter Your Bet Details!</legend>
         Title:
         <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!">
@@ -47,16 +48,19 @@
         Opponent Nickame:
         <input type="text" name="opponent" id="opponent_name" value="" placeholder="Opponent Nickname">
         <br>
-        <!-- Settle Date:
-        <input type="text" class="datepicker" name="settle_date" id="settle_date" value="">
-        <br> -->
         Terms of Bet:
-        <textarea name="bet_terms" id="bet_terms" rows="3" cols="30" placeholder="Describe the bet here"></textarea>
+        <input type="text" name="bet_terms" id="bet_terms" rows="3" cols="30" ></imput>
         <br>
         Stakes:
-        <textarea name="bet_stakes" id="bet_stakes" rows="2" cols="30" placeholder="What are the stakes?"></textarea>
+        <input type="text" name="bet_stakes" id="bet_stakes" rows="2" cols="30" ></imput>
         <br>
-        <button type="submit" class="btn btn-primary" id="enter_button">Add Bet!</button>
+        <button type="submit" class="btn btn-primary center" id="enter_button">Add Bet!</button>
+        <div class="dropdown">
+                
+                <div id="myDropdown" class="dropdown-content">
+                 
+                </div>
+              
     </fieldset>
     </form>
 </div>
