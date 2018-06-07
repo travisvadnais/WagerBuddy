@@ -6,7 +6,11 @@ module.exports = function(app){
     //New user setup is needed to ensure uniqueness in new user name, and new-bet setup is needed to populate the opponent dropdown.
     //Front-end guys can parse out the response depending on the request
     app.get("/names", function(req, res) {
-        db.User.findAll({}).then(function(dbUser) {
+        db.User.findAll({
+            order: [
+                ['nickname', 'ASC']
+            ]
+        }).then(function(dbUser) {
             console.log(dbUser);
             res.json(dbUser);
         });

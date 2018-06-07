@@ -10,7 +10,11 @@ module.exports = function (app) {
             where: {
                 $or: {UserId: req.params.id, player2: req.params.id},
                 $and: {player1win: 0,player2win: 0}
-            }
+            },
+            //This will order all the bets from most-recent --> oldest
+            order: [
+                ['createdAt', 'DESC']
+            ]
         })
         .then(function (dbWager) {
             res.json(dbWager);
@@ -25,7 +29,11 @@ module.exports = function (app) {
             where: {
                 $or: {UserId: req.params.id, player2: req.params.id},
                 $or: {player1win: 1, player2win: 1}
-            }
+            },
+            //This will order all the bets from most-recent --> oldest
+            order: [
+                ['createdAt', 'DESC']
+            ]
         })
         .then(function (dbWager) {
             res.json(dbWager);
