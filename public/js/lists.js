@@ -135,7 +135,8 @@ $("#maincontent").on('click', ".update", function () {
     createSummary(this.id, localStorage.getItem('wagerbuddy_userId'), "update", "#maincontent")
 })
 
-$("#updatebetbutton").on('click', function () {
+$("#updatebetbutton").on('click', function (event) {
+    event.preventDefault()
     WagerID = $(this).attr('data_ID')
     var queryString = '/betupdate/' + WagerID;
     var iwinner = 0
@@ -143,7 +144,6 @@ $("#updatebetbutton").on('click', function () {
     for (var i = 0; i < 3; i++) {
         var winString = "#Win" + i;
         var welchString = "#Welch" + i;
-        
         if($(winString).is(":checked")) {
             iwinner = i
         }
