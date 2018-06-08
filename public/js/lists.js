@@ -4,7 +4,12 @@
 //localStorage.setItem('wagerbuddy_userId', "1")
 //localStorage.clear('wagerbuddy_userId')
 // Takes the user id, the type of list (inactivebets or activebets, and the targetDiv from the DOM)
+var totaLWins = 0;
+var totalWagers = 0;
+
 function createTable(id, type, targetDiv) {
+    totaLWins = 0;
+    totalWagers = 0;
     var StaticDiv = $(targetDiv);
     var masterDiv = $("<div>");
     masterDiv.addClass('container')
@@ -36,13 +41,19 @@ function createTable(id, type, targetDiv) {
         method: "GET"
     }).then(function (response) {
         for (var i = 0; i < response.length; i++) {
+            totalWagers++;
             var newRow = createRow(response[i], id, type) // calls row creation function
             table.append(newRow)
+
         }
+        StaticDiv.empty()
+        var percentage =Math.floor((totaLWins*100)/totalWagers)
+        masterDiv.append(table);
+        var percent = $("<div>");
+        percent.html('<b>Win percentage: </b>' + percentage + " %")
+        masterDiv.append(percent)
+        StaticDiv.append(masterDiv);
     })
-    StaticDiv.empty()
-    masterDiv.append(table)
-    StaticDiv.append(masterDiv);
 }
 
 function createRow(data, id, type) {
@@ -64,6 +75,7 @@ function createRow(data, id, type) {
         }
     } else if (type == 'inactivebets') {
         if ((id == data.player1 && data.player1win == 1) || (id == data.player2 && data.player2win == 1)) {
+            totaLWins++;
             td3.html("<i class='small material-icons'>mood</i>Win")
         } else {
             td3.html("<i class='small material-icons'>mood_bad</i> Loss")
