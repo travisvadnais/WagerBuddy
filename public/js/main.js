@@ -126,27 +126,28 @@ function createMenu(targetDiv){
     row1.addClass("row")
     var column1a = $("<col>")
     column1a.addClass("col s6") 
-    column1a.html('<a id="mnewbet" href="#modalbet"class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i><br>New bet</a>')
+    column1a.html('<a id="mnewbet" href="#modalbet"class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i><br>NewBet</a>')
     row1.append(column1a)
     
-
-    var column1b = $("<col>")
-    column1b.addClass("col s6")
-    column1b.html('<a id="mactivebets" class="navbutton waves-effect waves-light btn" ><i class="large material-icons">access_time</i><br>current</a>')
-    row1.append(column1b)
-
+    
     var row2 = $("<row>")
     row2.addClass("row")
-
+    
+    
     var column2a = $("<col>")
     column2a.addClass("col s6")
     column2a.html('<a id="minactivebets" class="navbutton waves-effect waves-light btn" ><i class="large material-icons">history</i><br>past</a>')
     row2.append(column2a)
-
+    
     var column2b = $("<col>")
     column2b.addClass("col s6")
-    // column2b.html('<a id="muser" class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">person</i><br>user</a>')
+    column2b.html('<a id="mactivebets" class="navbutton waves-effect waves-light btn" ><i class="large material-icons">access_time</i><br>current</a>')
     row2.append(column2b)
+
+    // var column2b = $("<col>")
+    // column2b.addClass("col s6")
+    // column2b.html('<a id="muser" class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">person</i><br>user</a>')
+    // row2.append(column2b)
 
     staticDiv.empty();
    // masterDiv.append(column1)

@@ -27,6 +27,11 @@
         $(".nickname_validation").hide();
         $(".email_validation").hide();
         $(".unique_email").hide();
+        $("#oppName_validation").hide();
+        $("#oppNameInteger_validation").hide();
+        $("#terms_validation").hide();
+        $("#stakes_validation").hide();
+        $("#settle_date_validation").hide();
         document.getElementById('splashscreen').style.display = 'none';
         //Once the splash page is done, run the checkUser fx (on main.js)
         checkUser();
@@ -133,20 +138,17 @@
       <div class="container">
         <form id="new_bet">
           <fieldset>
-            <legend>Enter Your Bet Details!</legend>
-            Title:
+            <legend>Enter Your Bet Details!</legend><br>
+            <h6 id="required_fields">Fields with an <span id="asterisk">*</span> are required</h6>
+            Title: 
             <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!">
-            <br> Opponent Nickame:
-            <input type="text" name="opponent" id="opponent_name" value="" placeholder="Opponent Nickname">
-            <br> Terms of Bet:
-            <textarea id="bet_terms" class="materialize-textarea input-field"></textarea>
-            <!-- <input type="text" name="bet_terms" class="input-field" id="bet_terms" rows="3" cols="30"> -->
-            <!-- </input> -->
-            <br> Stakes:
-            <textarea id="bet_stakes" class="materialize-textarea input-field"></textarea>
-            <!-- <input type="text" name="bet_stakes" class="input-field" id="bet_stakes" rows="2" cols="30"> -->
-            <!-- </input> -->
-            <br> Date to settle:
+            <br> Opponent Nickname *: <span id="oppName_validation">This field is required</span><span id="oppNameInteger_validation">This field cannot be a number</span>
+            <input type="text" name="opponent" id="opponent_name" value="" placeholder="Select an existing user from dropdown, or type in a new person!">
+            <br> Terms of Bet *: <span id="terms_validation">This field is required</span>
+            <textarea id="bet_terms" class="materialize-textarea input-field placeholder="What are you betting on?""></textarea>
+            <br> Stakes *: <span id="stakes_validation">This field is required</span>
+            <textarea id="bet_stakes" class="materialize-textarea input-field placeholder="What will the winner get?""></textarea>
+            <br> Date to settle *: <span id="settle_date_validation">This field is required</span>
             <input type="text" class="datepicker" name="settle_date" id="settle_date" value="">
             <br>
             <button type="submit" class="btn btn-primary center" id="newbetbutton">Add Bet!</button>
@@ -209,8 +211,6 @@
     crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-  <script src="../js/newBet.js" type="text/javaScript"></script>
 
   <script type="text/javaScript">
     $(function() { $('.modal').modal(); $('.datepicker').pickadate({ selectMonths: true, // Creates a dropdown to control month
