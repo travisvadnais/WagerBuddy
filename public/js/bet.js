@@ -40,13 +40,9 @@ $("#newbetbutton").click('click', function(event){
     $("#stakes_validation").hide();
     $("#settle_date_validation").hide();
 
-    //First check to make sure this is filled out
-    console.log(`Your settle date is: ${date.val()}`);
-    console.log(oppName.val())
-    console.log(validateOppName(oppName.val()));
+    //First check to make sure this is filled out and, f so, make sure it's not a number
     if (validateOppName(oppName.val()) === true) {
-        //If so, make sure it's not a number
-        console.log(typeof parseInt(oppName.val()))
+        //console.log(typeof parseInt(oppName.val()))
         //Check the opponent name entry and reject it if it's a number
         if (typeof parseInt(oppName.val()) === "number") {
             $("#oppNameInteger_validation").show()
@@ -54,7 +50,7 @@ $("#newbetbutton").click('click', function(event){
     }
     
     //Check to make sure terms are filled out
-    console.log(terms.val())
+    //console.log(terms.val())
     if (terms.val() === "") {
         $("#terms_validation").show()
     }
@@ -70,7 +66,7 @@ $("#newbetbutton").click('click', function(event){
     //If everything passes, start the POST
 
     else {
-        console.log(localStorage.getItem('wagerbuddy_userId'))
+        //console.log(localStorage.getItem('wagerbuddy_userId'))
         var wagerData = {
             UserId: localStorage.getItem('wagerbuddy_userId'),
             title: $("#bet_title").val().trim(),
@@ -83,22 +79,22 @@ $("#newbetbutton").click('click', function(event){
             .then(function(dbWager) {
                 $('#modalbet').modal();
                 $('#modalbet').modal('close');
+                //Clear the form
+                $("#new_bet").trigger( "reset" );
                 createTable(localStorage.getItem('wagerbuddy_userId'), "activebets", "#maincontent")
             })
-            //Hide the <span> validation tags
-            $("#oppName_validation").hide();
-            $("#oppNameInteger_validation").hide();
-            $("#terms_validation").hide();
-            $("#stakes_validation").hide()
+
         }
 
-    function validateOppName(oppName) {
+    function validateOppName(opponent) {
         //fx will ensure this field isn't blank
-        if (oppName === "") {
+        //console.log(opponent)
+        if (opponent === "") {
             $("#oppName_validation").show()
             return false
         }
         else {return true}
     }
+
 
 })

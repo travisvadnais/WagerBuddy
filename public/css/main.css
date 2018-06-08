@@ -1,3 +1,5 @@
+
+
 #one {
     position: absolute;
     left: 100px;
@@ -113,6 +115,27 @@
     text-shadow: 2px 2px 3px rgb(243, 242, 242);
   } */
 
+  i.medium:hover {
+    cursor: pointer;
+    border: 2px solid rgb(23, 159, 157);
+  }
+
+  i.small {
+    padding: 0
+  }
+
+  h6#required_fields {
+    color: darkred;
+    font-size: .65em;
+    margin-bottom: 30px;
+  }
+
+  span#asterisk {
+    color: darkred;
+    font-weight: bolder;
+    font-size: 2em;
+  }
+
   
 
   #title {
@@ -140,7 +163,7 @@
 
   /* Styling for the user-registration validation fields */
   h6.nickname_validation, h6.email_validation, h6.unique_email {
-    color: red;
+    color: darkred;
     font-size: 10px;
     margin-left: 9%;
     margin-top: -10px;
@@ -148,7 +171,7 @@
 
   /* Styling for new-bet fields */
   span#oppName_validation, span#settle_date_validation, span#oppNameInteger_validation, span#terms_validation, span#stakes_validation {
-    color: red;
+    color: darkred;
     font-size: 10px;
     margin-top: 10px;
   }
@@ -159,6 +182,8 @@
 
   footer {
     Position: fixed;
+    /* TRAVIS - adjusted the height just a bit */
+    height: 65px;
     Bottom: 0;
     Left: 0;
     Right: 0;

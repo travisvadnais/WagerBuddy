@@ -139,15 +139,16 @@
         <form id="new_bet">
           <fieldset>
             <legend>Enter Your Bet Details!</legend><br>
+            <h6 id="required_fields">Fields with an <span id="asterisk">*</span> are required</h6>
             Title: 
             <input type="text" name="bet_title" class="form-control" id="bet_title" value="" placeholder="Name Your Bet!">
-            <br> Opponent Nickname: <span id="oppName_validation">This field is required</span><span id="oppNameInteger_validation">This field cannot be a number</span>
-            <input type="text" name="opponent" id="opponent_name" value="" placeholder="Who are you betting against?">
-            <br> Terms of Bet: <span id="terms_validation">This field is required</span>
+            <br> Opponent Nickname *: <span id="oppName_validation">This field is required</span><span id="oppNameInteger_validation">This field cannot be a number</span>
+            <input type="text" name="opponent" id="opponent_name" value="" placeholder="Select an existing user from dropdown, or type in a new person!">
+            <br> Terms of Bet *: <span id="terms_validation">This field is required</span>
             <input type="text" name="bet_terms" id="bet_terms" rows="3" cols="30" placeholder="What are you betting on?">
-            <br> Stakes: <span id="stakes_validation">This field is required</span>
+            <br> Stakes *: <span id="stakes_validation">This field is required</span>
             <input type="text" name="bet_stakes" id="bet_stakes" rows="2" cols="30" placeholder="What will the winner get?">
-            <br> Date to settle: <span id="settle_date_validation">This field is required</span>
+            <br> Date to settle *: <span id="settle_date_validation">This field is required</span>
             <input type="text" class="datepicker" name="settle_date" id="settle_date" value="">
             <br>
             <button type="submit" class="btn btn-primary center" id="newbetbutton">Add Bet!</button>
