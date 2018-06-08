@@ -7,15 +7,24 @@ module.exports = function (sequelize, DataTypes) {
         },
         terms: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
         },
         stakes: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                notEmpty: true
+            }
         },
         settledate: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
         },
         player1: {
             type: DataTypes.INTEGER,

@@ -146,6 +146,13 @@
     margin-top: -10px;
   }
 
+  /* Styling for new-bet fields */
+  span#oppName_validation, span#settle_date_validation, span#oppNameInteger_validation, span#terms_validation, span#stakes_validation {
+    color: red;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
   ul:not(.browser-default) {
     padding-left: 41%;
   }
