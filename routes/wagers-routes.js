@@ -42,8 +42,10 @@ module.exports = function (app) {
 
     //Pull back the details of a bet that match that bet ID
     app.get('/bet/:betid', function (req, res) {
+        
         //SQL: SELECT * FROM Wagers WHERE id=betid
-        db.Wager.findAll({    
+        db.Wager.findAll({ 
+            include: [{model: db.User}],   
             where: {
                 id: req.params.betid
             }

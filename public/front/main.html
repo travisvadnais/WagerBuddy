@@ -145,9 +145,9 @@
             <br> Opponent Nickname *: <span id="oppName_validation">This field is required</span><span id="oppNameInteger_validation">This field cannot be a number</span>
             <input type="text" name="opponent" id="opponent_name" value="" placeholder="Select an existing user from dropdown, or type in a new person!">
             <br> Terms of Bet *: <span id="terms_validation">This field is required</span>
-            <input type="text" name="bet_terms" id="bet_terms" rows="3" cols="30" placeholder="What are you betting on?">
+            <textarea id="bet_terms" class="materialize-textarea input-field placeholder="What are you betting on?""></textarea>
             <br> Stakes *: <span id="stakes_validation">This field is required</span>
-            <input type="text" name="bet_stakes" id="bet_stakes" rows="2" cols="30" placeholder="What will the winner get?">
+            <textarea id="bet_stakes" class="materialize-textarea input-field placeholder="What will the winner get?""></textarea>
             <br> Date to settle *: <span id="settle_date_validation">This field is required</span>
             <input type="text" class="datepicker" name="settle_date" id="settle_date" value="">
             <br>
@@ -200,7 +200,7 @@
                 <label for="Welch2">
                 They welched
                 </label><br>
-                <button type="submit" class="btn btn-primary center" id="updatebetbutton">Add Bet!</button>
+                <button type="submit" class="btn btn-primary center" id="updatebetbutton">Update!</button>
 
         </form>
      </div>
@@ -218,7 +218,7 @@
     today: 'Today', 
     clear: 'Clear', 
     close: 'Ok', 
-    closeOnSelect: false, // Close upon selecting a date, container: undefined, 
+    closeOnSelect: true, // Close upon selecting a date, container: undefined, 
     // ex. 'body' will append picker to body 
       }); 
     });

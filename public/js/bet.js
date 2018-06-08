@@ -33,6 +33,7 @@ $("#newbetbutton").click('click', function(event){
 
     //need validation
    
+
     //Hide all the validation fields for re-submits
     $("#oppName_validation").hide();
     $("#oppNameInteger_validation").hide();
@@ -85,6 +86,7 @@ $("#newbetbutton").click('click', function(event){
             })
 
         }
+
 
     function validateOppName(opponent) {
         //fx will ensure this field isn't blank
