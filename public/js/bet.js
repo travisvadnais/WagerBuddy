@@ -38,6 +38,11 @@ $("#newbetbutton").click('click', function(){
     };
     $.post("/newbet", wagerData)
         .then(function(dbWager) {
+            $("#bet_title").val("")
+            $("#opponent_name").val("")
+            $("#bet_terms").val("")
+            $("#bet_stakes").val("")
+            $("#settle_date").val("")
             $('#modalbet').modal();
             $('#modalbet').modal('close');
             createTable(localStorage.getItem('wagerbuddy_userId'), "activebets", "#maincontent")

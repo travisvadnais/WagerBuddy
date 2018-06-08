@@ -6,6 +6,9 @@
 
   body {
     background: #afb42b;
+    height:auto;
+    overflow-x:hidden;
+    margin-bottom: 150px
   }
 
   #splashscreen {
