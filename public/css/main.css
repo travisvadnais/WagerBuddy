@@ -1,3 +1,5 @@
+
+
 #one {
     position: absolute;
     left: 100px;
@@ -5,17 +7,18 @@
   }  
 
   body {
-    background: #afb42b;
+    /* background: #afb42b; */
+   background-image: url(../images/diagmonds--light--1920x1080.png);
   }
 
   #splashscreen {
-    background-image: url(../front/beer.png);
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    background-image: url(../images/beer.png);
+    /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
     background-size: 300px 400px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-color: rgb(13, 142, 228);
+    background-color:  rgba(4, 131, 250);
     min-width: 100vw;
     min-height: 100vh;
     z-index: 9999;
@@ -29,49 +32,72 @@
     top: 50%;
     left: 50%;   
   }
-  #homebtn, #date, #newbet, #history, .navbutton {
-    padding: 10px;
+  #homebtn, #date, #newbet, #history, .navbutton 
+  {
+    
+    
+    width: 140px;
+    height: 140px;
+    -webkit-transition-duration: 0.2s; 
+    transition-duration: 0.2s;
+    background: radial-gradient(rgba(121, 120, 120, 0.77),rgba(49, 49, 49, 0.897),rgba(0, 0, 0, 0.966));
+    margin: 0px auto;
+    text-align: center;
+    border: 1px double rgb(100, 99, 99);
+    color: rgb(17, 126, 125);
+    text-shadow: -1px -1px 0px rgba(255,255,255,0.8), 1px 1px 2px rgba(0,0,0,1);
+    border-radius: 50%;
+    font-family: sans-serif;
+    box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.534), 0 8px 35px 0 rgba(0, 0, 0, 0.486);
+    width: 100px;
+    height: 100px;
+  }
+  /* { */
+    /* padding: 10px;
     background: linear-gradient( rgb(63, 62, 62),rgb(100, 99, 99),rgb(63, 62, 62));
     border: 1px double rgb(100, 99, 99);
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-    box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.534), 0 8px 35px 0 rgba(0, 0, 0, 0.486);
+    box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.534), 0 8px 35px 0 rgba(0, 0, 0, 0.486); */
     /* position: absolute; */
-    border-radius: 5px;
+    /* border-radius: 5px;
     text-align: center;
     align-content: center;
     color: aqua;
     width: 100px;
     height: 100px;
-    vertical-align: bottom;
+    vertical-align: bottom; */
     /* top: 20%;
     left: 20%; */
-    font-size: 14px;
+    /* font-size: 14px;
     border-radius: 20%;
-  }
-  #newbet, #history{
+  } */
+  /* #newbet, #history{
     margin-top: 20px;
-  }
+  } */
 
   #minactivebets, #muser{
-    margin-top: 20px;
-  }  
-
-  #homebtn, #date{
+    margin-left: 48px;
+    margin-top: 330px;
+  } 
+  #mactivebets{
+    
+    margin-top: 330px;
+  } 
+   #date{
     margin-top: 60%;
   }
-
-  #mnewbet, #mactivebets{
-    margin-top: 60%;
-  }
-
 
   #date, #newbet{
     float: right;
   }
 
-  #mnewbet, #minactivebets{
-    float: right;
+  #mnewbet{
+    position: fixed;
+    top: 40%;
+    left: 64%;
+    margin-top: -50px;
+    margin-left: -100px;
   }
 
 
@@ -81,10 +107,32 @@
     font-size: 3.0rem;
   }
 
-  .material-icons{
+  /* .material-icons{
     margin-top: 0.5px;
     margin-right: 4px;
     font-size: 10px;
+    text-shadow: 2px 2px 3px rgb(243, 242, 242);
+  } */
+
+  i.medium:hover {
+    cursor: pointer;
+    border: 2px solid rgb(23, 159, 157);
+  }
+
+  i.small {
+    padding: 0
+  }
+
+  h6#required_fields {
+    color: darkred;
+    font-size: .65em;
+    margin-bottom: 30px;
+  }
+
+  span#asterisk {
+    color: darkred;
+    font-weight: bolder;
+    font-size: 2em;
   }
 
   
@@ -114,10 +162,17 @@
 
   /* Styling for the user-registration validation fields */
   h6.nickname_validation, h6.email_validation, h6.unique_email {
-    color: red;
+    color: darkred;
     font-size: 10px;
     margin-left: 9%;
     margin-top: -10px;
+  }
+
+  /* Styling for new-bet fields */
+  span#oppName_validation, span#settle_date_validation, span#oppNameInteger_validation, span#terms_validation, span#stakes_validation {
+    color: darkred;
+    font-size: 10px;
+    margin-top: 10px;
   }
 
   ul:not(.browser-default) {
@@ -126,21 +181,37 @@
 
   footer {
     Position: fixed;
+    /* TRAVIS - adjusted the height just a bit */
+    height: 65px;
     Bottom: 0;
     Left: 0;
     Right: 0;
     z-index: 3;
     text-align: center;
-    background-color: rgb(63, 62, 62);
-    color: aqua;
+    background-image: url(../images/fotter.png);
+    color: #549396;
  
   }
   a {
+    font-size: 14px;
     text-align: center;
+    color: rgb(23, 159, 157);
     padding: 10px;
+    text-shadow: -1.5px -1.5px 2px rgba(255,255,255,0.8), 1.5px 1.5px 2px rgba(0,0,0,1);
+
   }
 
   .betsummary {
     line-height: 30px;
   }
 
+  .modal { width: 90% !important ; height: 60% !important ; } 
+  .new_bet{
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    height: 295px;
+    padding-right: 12px;
+}
+  
+.btn{padding: 0 1rem};
