@@ -223,7 +223,9 @@
   margin-top: 354px;
 margin-left: 55px;
 }
-
+img{    height: 200px;
+  width: 350px;
+  margin-left: 20px;}
 .row .col.s6 {
 width: 43%;
 margin-left: auto;
@@ -236,6 +238,8 @@ right: auto;
 } 
 .container {
 width: 99%;
+
+margin-top: -194px;
 }
 body {
   height: 570px;
@@ -247,7 +251,12 @@ body {
 @media (min-width: 600px){
 .container {
   width: 28%;
+  margin-top: -144px;
 }
+img{    width: 300px;
+  height: 200px;
+  margin-left: 421px;}
+
 #mactivebets {
   margin-top: 300px;
   margin-left: 20px;

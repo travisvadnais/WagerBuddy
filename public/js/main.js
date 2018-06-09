@@ -121,6 +121,13 @@ function createMenu(targetDiv){
     var staticDiv = $(targetDiv);
     var masterDiv = $("<div>")
     masterDiv.addClass("container")
+    
+    var row = $("<row>")
+    row.addClass("row")
+    var img = $("<col>")
+    img.addClass("col s12") 
+    img.html('<img src="../../routes/wagers-routes" alt="Smiley" height="50" width="100">')
+    row.append(column1a)
      //var column1 = $("<col>")
      //column1.addClass("col")
     var row1 = $("<row>")
