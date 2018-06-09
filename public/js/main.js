@@ -120,12 +120,15 @@ function checkUser(){
 function createMenu(targetDiv){
     var staticDiv = $(targetDiv);
     var masterDiv = $("<div>")
+    masterDiv.attr("id","mastermenu")
      //var column1 = $("<col>")
      //column1.addClass("col")
+     masterDiv.addClass("container")
     var row1 = $("<row>")
     row1.addClass("row")
     var column1a = $("<col>")
-    column1a.addClass("col s6") 
+    column1a.addClass("col s12")
+    column1a.attr("id","centercol") 
     column1a.html('<a id="mnewbet" href="#modalbet"class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i><br>NewBet</a>')
     row1.append(column1a)
     
@@ -136,11 +139,13 @@ function createMenu(targetDiv){
     
     var column2a = $("<col>")
     column2a.addClass("col s6")
+    column2a.attr("id","leftcol")
     column2a.html('<a id="minactivebets" class="navbutton waves-effect waves-light btn" ><i class="large material-icons">history</i><br>past</a>')
     row2.append(column2a)
     
     var column2b = $("<col>")
     column2b.addClass("col s6")
+    column2b.attr("id","rightcol")
     column2b.html('<a id="mactivebets" class="navbutton waves-effect waves-light btn" ><i class="large material-icons">access_time</i><br>current</a>')
     row2.append(column2b)
 
