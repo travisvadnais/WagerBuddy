@@ -9,6 +9,7 @@
   body {
     /* background: #afb42b; */
    background-image: url(../images/diagmonds--light--1920x1080.png);
+   margin-bottom: 150px;
   }
 
   #splashscreen {
@@ -52,55 +53,14 @@
     width: 100px;
     height: 100px;
   }
-  /* { */
-    /* padding: 10px;
-    background: linear-gradient( rgb(63, 62, 62),rgb(100, 99, 99),rgb(63, 62, 62));
-    border: 1px double rgb(100, 99, 99);
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
-    box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.534), 0 8px 35px 0 rgba(0, 0, 0, 0.486); */
-    /* position: absolute; */
-    /* border-radius: 5px;
-    text-align: center;
-    align-content: center;
-    color: aqua;
-    width: 100px;
-    height: 100px;
-    vertical-align: bottom; */
-    /* top: 20%;
-    left: 20%; */
-    /* font-size: 14px;
-    border-radius: 20%;
-  } */
-  /* #newbet, #history{
-    margin-top: 20px;
-  } */
 
-  #minactivebets, #muser{
-    margin-left: 48px;
-    margin-top: 330px;
-  } 
-  #mactivebets{
-    
-    margin-top: 330px;
-  } 
-   #date{
-    margin-top: 60%;
+  #mastermenu{
+    margin-top: 80px;
   }
 
-  #date, #newbet{
-    float: right;
-  }
-
-  #mnewbet{
-    position: fixed;
-    top: 40%;
-    left: 64%;
-    margin-top: -50px;
-    margin-left: -100px;
-  }
-
-
+#centercol, #leftcol, #rightcol {
+  text-align: center;
+}
 
   .btn i{
     padding-top: 10px;
