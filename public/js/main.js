@@ -17,7 +17,7 @@ function checkUser(){
     else {
         console.log("you're a new user");
         //Launch the modal for new users ONLY.  The 'dismissible' property will prevent users from exiting modal by clicking outside of it
-        $('.modal').modal({dismissible: false});
+        $('.modal').modal({dismissible: true});
         $('#modal1').modal('open');
 
         //Set a listener for the form submit & call the handleNewUser fx
@@ -120,12 +120,13 @@ function checkUser(){
 function createMenu(targetDiv){
     var staticDiv = $(targetDiv);
     var masterDiv = $("<div>")
+    masterDiv.addClass("container")
      //var column1 = $("<col>")
      //column1.addClass("col")
     var row1 = $("<row>")
     row1.addClass("row")
     var column1a = $("<col>")
-    column1a.addClass("col s6") 
+    column1a.addClass("col s12") 
     column1a.html('<a id="mnewbet" href="#modalbet"class="navbutton waves-effect waves-light btn modal-trigger" ><i class="large material-icons">monetization_on</i><br>NewBet</a>')
     row1.append(column1a)
     

@@ -76,14 +76,7 @@
     margin-top: 20px;
   } */
 
-  #minactivebets, #muser{
-    margin-left: 48px;
-    margin-top: 330px;
-  } 
-  #mactivebets{
-    
-    margin-top: 330px;
-  } 
+  
    #date{
     margin-top: 60%;
   }
@@ -92,74 +85,67 @@
     float: right;
   }
 
-  #mnewbet{
-    position: fixed;
-    top: 40%;
-    left: 64%;
-    margin-top: -50px;
-    margin-left: -100px;
-  }
-
-
-
+  
+  
+  
   .btn i{
     padding-top: 10px;
     font-size: 3.0rem;
   }
-
+  
   /* .material-icons{
     margin-top: 0.5px;
     margin-right: 4px;
     font-size: 10px;
     text-shadow: 2px 2px 3px rgb(243, 242, 242);
   } */
-
+  
   i.medium:hover {
     cursor: pointer;
     border: 2px solid rgb(23, 159, 157);
   }
-
+  
   i.small {
     padding: 0
   }
-
+  
   h6#required_fields {
     color: darkred;
     font-size: .65em;
     margin-bottom: 30px;
   }
-
+  
   span#asterisk {
     color: darkred;
     font-weight: bolder;
     font-size: 2em;
   }
-
   
-
+  
+  
   #title {
     margin-top: 10%;
     text-align: center;
     font-family: 'Shrikhand', cursive;
     font-size: 30px;
   }
-
+  
   .preloader-wrapper{
     margin-right:auto;
     margin-left:auto;
   }
-
+  
   h5.modal_header {
     text-align: center;
     color: #26a69a;
     font-weight: bold;
     text-shadow: 1px 1px black;
   }
-
+  
   #login_form {
     margin-top: 10px;
   }
-
+  
   /* Styling for the user-registration validation fields */
   h6.nickname_validation, h6.email_validation, h6.unique_email {
     color: darkred;
@@ -167,18 +153,18 @@
     margin-left: 9%;
     margin-top: -10px;
   }
-
+  
   /* Styling for new-bet fields */
   span#oppName_validation, span#settle_date_validation, span#oppNameInteger_validation, span#terms_validation, span#stakes_validation {
     color: darkred;
     font-size: 10px;
     margin-top: 10px;
   }
-
+  
   ul:not(.browser-default) {
     padding-left: 41%;
   }
-
+  
   footer {
     Position: fixed;
     /* TRAVIS - adjusted the height just a bit */
@@ -190,7 +176,7 @@
     text-align: center;
     background-image: url(../images/fotter.png);
     color: #549396;
- 
+    
   }
   a {
     font-size: 14px;
@@ -198,13 +184,13 @@
     color: rgb(23, 159, 157);
     padding: 10px;
     text-shadow: -1.5px -1.5px 2px rgba(255,255,255,0.8), 1.5px 1.5px 2px rgba(0,0,0,1);
-
+    
   }
-
+  
   .betsummary {
     line-height: 30px;
   }
-
+  
   .modal { width: 90% !important ; height: 60% !important ; } 
   .new_bet{
     border-left-width: 0px;
@@ -212,6 +198,69 @@
     border-top-width: 0px;
     height: 295px;
     padding-right: 12px;
-}
+  }
   
-.btn{padding: 0 1rem};
+  .btn{padding: 0 1rem};
+  
+  .row .col.s12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    text-align: center;
+  }
+  
+@media (max-width: 992px){
+  
+#mnewbet{
+  position: fixed;
+  margin-top: 134%;
+  left: 55%;
+  margin-top: 238px;
+  margin-left: -70px;
+}
+#minactivebets, #muser {
+  margin-top: 354px;
+margin-left: 55px;
+}
+
+.row .col.s6 {
+width: 43%;
+margin-left: auto;
+left: auto;
+right: auto;
+}
+#mactivebets{
+  margin-top: 354px;
+  margin-left: 29px;
+} 
+.container {
+width: 99%;
+}
+body {
+  height: 570px;
+}
+}
+
+
+
+@media (min-width: 600px){
+.container {
+  width: 28%;
+}
+#mactivebets {
+  margin-top: 300px;
+  margin-left: 20px;
+}
+
+#mnewbet{
+  position: fixed;
+  margin-top: 168px;
+  margin-left: -8px;
+}
+
+#minactivebets, #muser {
+  margin-top: 300px;
+  margin-left: -78px;
+}
+}
