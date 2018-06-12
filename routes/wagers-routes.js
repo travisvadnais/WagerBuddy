@@ -7,10 +7,10 @@ module.exports = function (app) {
         // SQL: SELECT * FROM Wagers WHERE (player1=playerid OR player2=playerid) AND (player1win=false AND player2win=false);
         db.Wager.findAll({
             include: [{model: db.User}],
-            where: {
-                $or: {UserId: req.params.id, player2: req.params.id},
-                $and: {player1win: 0,player2win: 0}
-            },
+            where: [
+               { $or: {UserId: req.params.id, player2: req.params.id}},
+                {$and: {player1win: 0,player2win: 0}}
+            ],
             //This will order all the bets from most-recent --> oldest
             order: [
                 ['createdAt', 'DESC']
@@ -26,10 +26,10 @@ module.exports = function (app) {
         //SQL:  SELECT * FROM Wagers WHERE (player1=playerid OR player2=playerid) AND (player1win=true OR player2win=true);
         db.Wager.findAll({
             include: [{model: db.User}],
-            where: {
-                $or: {UserId: req.params.id, player2: req.params.id},
-                $or: {player1win: 1, player2win: 1}
-            },
+            where: [   
+                {$or: {player1win: 1, player2win: 1}},
+                {$or: {player1: req.params.id, player2: req.params.id}}
+            ],
             //This will order all the bets from most-recent --> oldest
             order: [
                 ['createdAt', 'DESC']

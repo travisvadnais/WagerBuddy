@@ -58,8 +58,16 @@
     margin-top: 80px;
   }
 
-#centercol, #leftcol, #rightcol {
+#centercol {
   text-align: center;
+}
+
+#leftcol {
+  text-align: right;
+}
+
+#rightcol {
+  text-align: left;
 }
 
   .btn i{
